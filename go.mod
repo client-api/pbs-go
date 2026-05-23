@@ -5,5 +5,3 @@ go 1.23
 require (
 	gopkg.in/validator.v2 v2.0.1
 )
-
-require github.com/gorilla/websocket v1.5.3
