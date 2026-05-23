@@ -30,10 +30,8 @@ func main() {
 		fmt.Fprintln(os.Stderr, "list nodes:", err)
 		os.Exit(1)
 	}
-	nodes := resp.GetData()
-	fmt.Printf("Found %d node(s):\n", len(nodes))
-	for _, n := range nodes {
-		// Other products expose a slimmer Node shape; print verbatim.
-		fmt.Printf("  - %+v\n", n)
-	}
+	// Non-PVE products: the upstream apidoc.js declares this endpoint
+	// `returns: { type: null }`, so the generator emits `data` as an
+	// untyped `interface{}` field. Print whatever came back.
+	fmt.Printf("Response: %+v\n", resp.GetData())
 }
