@@ -2518,7 +2518,7 @@ func (a *TapeDriveAPIService) TapeDriveGetDriveExecute(r ApiTapeDriveGetDriveReq
 	if r.queryActivity != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "query-activity", r.queryActivity, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "query-activity", defaultValue, "form", "")
 		r.queryActivity = &defaultValue
 	}

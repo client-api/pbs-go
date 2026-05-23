@@ -515,7 +515,7 @@ func (a *NodesCertificatesAPIService) NodesCertificatesDeleteCustomExecute(r Api
 	if r.restart != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "restart", r.restart, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "restart", defaultValue, "form", "")
 		r.restart = &defaultValue
 	}

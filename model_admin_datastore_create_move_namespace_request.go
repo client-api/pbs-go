@@ -47,11 +47,11 @@ type _AdminDatastoreCreateMoveNamespaceRequest AdminDatastoreCreateMoveNamespace
 // will change when the set of required properties is changed
 func NewAdminDatastoreCreateMoveNamespaceRequest(ns string, targetNs string) *AdminDatastoreCreateMoveNamespaceRequest {
 	this := AdminDatastoreCreateMoveNamespaceRequest{}
-	var deleteSource bool = 1
+	var deleteSource bool = true
 	this.DeleteSource = &deleteSource
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
-	var mergeGroups bool = 1
+	var mergeGroups bool = true
 	this.MergeGroups = &mergeGroups
 	this.Ns = ns
 	this.TargetNs = targetNs
@@ -64,13 +64,13 @@ func NewAdminDatastoreCreateMoveNamespaceRequest(ns string, targetNs string) *Ad
 func NewAdminDatastoreCreateMoveNamespaceRequestWithDefaults() *AdminDatastoreCreateMoveNamespaceRequest {
 	this := AdminDatastoreCreateMoveNamespaceRequest{}
 
-	var deleteSource bool = 1
+	var deleteSource bool = true
 	this.DeleteSource = &deleteSource
 
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
 
-	var mergeGroups bool = 1
+	var mergeGroups bool = true
 	this.MergeGroups = &mergeGroups
 
 

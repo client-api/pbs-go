@@ -45,9 +45,9 @@ type _NodesCertificatesCreateCustomRequest NodesCertificatesCreateCustomRequest
 func NewNodesCertificatesCreateCustomRequest(certificates string) *NodesCertificatesCreateCustomRequest {
 	this := NodesCertificatesCreateCustomRequest{}
 	this.Certificates = certificates
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
-	var restart bool = 0
+	var restart bool = false
 	this.Restart = &restart
 	return &this
 }
@@ -59,11 +59,11 @@ func NewNodesCertificatesCreateCustomRequestWithDefaults() *NodesCertificatesCre
 	this := NodesCertificatesCreateCustomRequest{}
 
 
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 
 
-	var restart bool = 0
+	var restart bool = false
 	this.Restart = &restart
 
 	return &this

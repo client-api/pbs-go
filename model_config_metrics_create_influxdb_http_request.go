@@ -61,7 +61,7 @@ func NewConfigMetricsCreateInfluxdbHttpRequest(name string, url string) *ConfigM
 	this := ConfigMetricsCreateInfluxdbHttpRequest{}
 	var bucket string = "proxmox"
 	this.Bucket = &bucket
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var maxBodySize int64 = 25000000
 	this.MaxBodySize = &maxBodySize
@@ -69,7 +69,7 @@ func NewConfigMetricsCreateInfluxdbHttpRequest(name string, url string) *ConfigM
 	var organization string = "proxmox"
 	this.Organization = &organization
 	this.Url = url
-	var verifyTls bool = 1
+	var verifyTls bool = true
 	this.VerifyTls = &verifyTls
 	return &this
 }
@@ -84,7 +84,7 @@ func NewConfigMetricsCreateInfluxdbHttpRequestWithDefaults() *ConfigMetricsCreat
 	this.Bucket = &bucket
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var maxBodySize int64 = 25000000
@@ -96,7 +96,7 @@ func NewConfigMetricsCreateInfluxdbHttpRequestWithDefaults() *ConfigMetricsCreat
 
 
 
-	var verifyTls bool = 1
+	var verifyTls bool = true
 	this.VerifyTls = &verifyTls
 
 	return &this

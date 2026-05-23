@@ -65,10 +65,10 @@ type _ConfigAccessCreateOpenidRequest ConfigAccessCreateOpenidRequest
 // will change when the set of required properties is changed
 func NewConfigAccessCreateOpenidRequest(clientId string, issuerUrl string, realm string) *ConfigAccessCreateOpenidRequest {
 	this := ConfigAccessCreateOpenidRequest{}
-	var autocreate bool = 0
+	var autocreate bool = false
 	this.Autocreate = &autocreate
 	this.ClientId = clientId
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	this.IssuerUrl = issuerUrl
 	this.Realm = realm
@@ -82,13 +82,13 @@ func NewConfigAccessCreateOpenidRequestWithDefaults() *ConfigAccessCreateOpenidR
 	this := ConfigAccessCreateOpenidRequest{}
 
 
-	var autocreate bool = 0
+	var autocreate bool = false
 	this.Autocreate = &autocreate
 
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 

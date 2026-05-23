@@ -70,7 +70,7 @@ type ConfigPruneUpdatePruneRequest struct {
 // will change when the set of required properties is changed
 func NewConfigPruneUpdatePruneRequest() *ConfigPruneUpdatePruneRequest {
 	this := ConfigPruneUpdatePruneRequest{}
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	return &this
 }
@@ -84,7 +84,7 @@ func NewConfigPruneUpdatePruneRequestWithDefaults() *ConfigPruneUpdatePruneReque
 
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 

@@ -75,7 +75,7 @@ type _AdminVerifyGetVerifyResponseDataInner AdminVerifyGetVerifyResponseDataInne
 func NewAdminVerifyGetVerifyResponseDataInner(id string, store string) *AdminVerifyGetVerifyResponseDataInner {
 	this := AdminVerifyGetVerifyResponseDataInner{}
 	this.Id = id
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -95,7 +95,7 @@ func NewAdminVerifyGetVerifyResponseDataInnerWithDefaults() *AdminVerifyGetVerif
 
 
 
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 
 

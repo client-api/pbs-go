@@ -63,7 +63,7 @@ type _ConfigVerifyCreateVerifyRequest ConfigVerifyCreateVerifyRequest
 func NewConfigVerifyCreateVerifyRequest(id string, store string) *ConfigVerifyCreateVerifyRequest {
 	this := ConfigVerifyCreateVerifyRequest{}
 	this.Id = id
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -83,7 +83,7 @@ func NewConfigVerifyCreateVerifyRequestWithDefaults() *ConfigVerifyCreateVerifyR
 
 
 
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 
 	var maxDepth int32 = 7

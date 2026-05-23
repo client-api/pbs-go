@@ -510,7 +510,7 @@ func (a *ConfigAcmeAPIService) ConfigAcmeDeleteAccountExecute(r ApiConfigAcmeDel
 	if r.force != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "force", r.force, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "force", defaultValue, "form", "")
 		r.force = &defaultValue
 	}

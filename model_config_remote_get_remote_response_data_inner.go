@@ -56,7 +56,7 @@ func NewConfigRemoteGetRemoteResponseDataInner(authId string, host string, name 
 	this.AuthId = authId
 	this.Host = host
 	this.Name = name
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 	return &this
 }
@@ -73,7 +73,7 @@ func NewConfigRemoteGetRemoteResponseDataInnerWithDefaults() *ConfigRemoteGetRem
 
 
 
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 
 	return &this

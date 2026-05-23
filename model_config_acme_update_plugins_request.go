@@ -46,7 +46,7 @@ type ConfigAcmeUpdatePluginsRequest struct {
 // will change when the set of required properties is changed
 func NewConfigAcmeUpdatePluginsRequest() *ConfigAcmeUpdatePluginsRequest {
 	this := ConfigAcmeUpdatePluginsRequest{}
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	var validationDelay int32 = 30
 	this.ValidationDelay = &validationDelay
@@ -63,7 +63,7 @@ func NewConfigAcmeUpdatePluginsRequestWithDefaults() *ConfigAcmeUpdatePluginsReq
 
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 	var validationDelay int32 = 30

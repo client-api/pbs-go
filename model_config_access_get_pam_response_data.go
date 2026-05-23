@@ -44,7 +44,7 @@ type _ConfigAccessGetPamResponseData ConfigAccessGetPamResponseData
 // will change when the set of required properties is changed
 func NewConfigAccessGetPamResponseData(realm string, type_ PbsTypeEnum) *ConfigAccessGetPamResponseData {
 	this := ConfigAccessGetPamResponseData{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	this.Realm = realm
 	this.Type = type_
@@ -58,7 +58,7 @@ func NewConfigAccessGetPamResponseDataWithDefaults() *ConfigAccessGetPamResponse
 	this := ConfigAccessGetPamResponseData{}
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 

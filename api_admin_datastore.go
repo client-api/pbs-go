@@ -2563,7 +2563,7 @@ func (a *AdminDatastoreAPIService) AdminDatastoreDeleteGroupsExecute(r ApiAdminD
 	if r.errorOnProtected != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "error-on-protected", r.errorOnProtected, "form", "")
 	} else {
-		var defaultValue bool = 1
+		var defaultValue bool = true
 		parameterAddToHeaderOrQuery(localVarQueryParams, "error-on-protected", defaultValue, "form", "")
 		r.errorOnProtected = &defaultValue
 	}
@@ -2813,14 +2813,14 @@ func (a *AdminDatastoreAPIService) AdminDatastoreDeleteNamespaceExecute(r ApiAdm
 	if r.deleteGroups != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delete-groups", r.deleteGroups, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delete-groups", defaultValue, "form", "")
 		r.deleteGroups = &defaultValue
 	}
 	if r.errorOnProtected != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "error-on-protected", r.errorOnProtected, "form", "")
 	} else {
-		var defaultValue bool = 1
+		var defaultValue bool = true
 		parameterAddToHeaderOrQuery(localVarQueryParams, "error-on-protected", defaultValue, "form", "")
 		r.errorOnProtected = &defaultValue
 	}
@@ -7239,7 +7239,7 @@ func (a *AdminDatastoreAPIService) AdminDatastoreGetStatusExecute(r ApiAdminData
 	if r.verbose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "verbose", r.verbose, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "verbose", defaultValue, "form", "")
 		r.verbose = &defaultValue
 	}

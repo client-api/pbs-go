@@ -1381,14 +1381,14 @@ func (a *NodesDisksAPIService) NodesDisksGetListExecute(r ApiNodesDisksGetListRe
 	if r.includePartitions != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include-partitions", r.includePartitions, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include-partitions", defaultValue, "form", "")
 		r.includePartitions = &defaultValue
 	}
 	if r.skipsmart != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "skipsmart", r.skipsmart, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "skipsmart", defaultValue, "form", "")
 		r.skipsmart = &defaultValue
 	}

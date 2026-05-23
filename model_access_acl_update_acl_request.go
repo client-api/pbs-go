@@ -54,7 +54,7 @@ type _AccessAclUpdateAclRequest AccessAclUpdateAclRequest
 func NewAccessAclUpdateAclRequest(path string, role PbsRoleidEnum) *AccessAclUpdateAclRequest {
 	this := AccessAclUpdateAclRequest{}
 	this.Path = path
-	var propagate bool = 1
+	var propagate bool = true
 	this.Propagate = &propagate
 	this.Role = role
 	return &this
@@ -71,7 +71,7 @@ func NewAccessAclUpdateAclRequestWithDefaults() *AccessAclUpdateAclRequest {
 
 
 
-	var propagate bool = 1
+	var propagate bool = true
 	this.Propagate = &propagate
 
 

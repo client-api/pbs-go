@@ -67,9 +67,9 @@ func NewAdminDatastoreCreatePruneRequest(backupId string, backupType PbsBackupTy
 	this := AdminDatastoreCreatePruneRequest{}
 	this.BackupId = backupId
 	this.BackupType = backupType
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
-	var useTask bool = 0
+	var useTask bool = false
 	this.UseTask = &useTask
 	return &this
 }
@@ -82,7 +82,7 @@ func NewAdminDatastoreCreatePruneRequestWithDefaults() *AdminDatastoreCreatePrun
 
 
 
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
 
 
@@ -92,7 +92,7 @@ func NewAdminDatastoreCreatePruneRequestWithDefaults() *AdminDatastoreCreatePrun
 
 
 
-	var useTask bool = 0
+	var useTask bool = false
 	this.UseTask = &useTask
 
 	return &this

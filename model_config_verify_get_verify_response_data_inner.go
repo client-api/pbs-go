@@ -63,7 +63,7 @@ type _ConfigVerifyGetVerifyResponseDataInner ConfigVerifyGetVerifyResponseDataIn
 func NewConfigVerifyGetVerifyResponseDataInner(id string, store string) *ConfigVerifyGetVerifyResponseDataInner {
 	this := ConfigVerifyGetVerifyResponseDataInner{}
 	this.Id = id
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -83,7 +83,7 @@ func NewConfigVerifyGetVerifyResponseDataInnerWithDefaults() *ConfigVerifyGetVer
 
 
 
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 
 	var maxDepth int32 = 7

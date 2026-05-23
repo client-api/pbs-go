@@ -34,9 +34,9 @@ type NodesAptCreateUpdateRequest struct {
 // will change when the set of required properties is changed
 func NewNodesAptCreateUpdateRequest() *NodesAptCreateUpdateRequest {
 	this := NodesAptCreateUpdateRequest{}
-	var notify bool = 0
+	var notify bool = false
 	this.Notify = &notify
-	var quiet bool = 0
+	var quiet bool = false
 	this.Quiet = &quiet
 	return &this
 }
@@ -47,10 +47,10 @@ func NewNodesAptCreateUpdateRequest() *NodesAptCreateUpdateRequest {
 func NewNodesAptCreateUpdateRequestWithDefaults() *NodesAptCreateUpdateRequest {
 	this := NodesAptCreateUpdateRequest{}
 
-	var notify bool = 0
+	var notify bool = false
 	this.Notify = &notify
 
-	var quiet bool = 0
+	var quiet bool = false
 	this.Quiet = &quiet
 
 	return &this

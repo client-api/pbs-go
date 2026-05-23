@@ -73,7 +73,7 @@ type ConfigS3UpdateS3Request struct {
 // will change when the set of required properties is changed
 func NewConfigS3UpdateS3Request() *ConfigS3UpdateS3Request {
 	this := ConfigS3UpdateS3Request{}
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 	return &this
 }
@@ -91,7 +91,7 @@ func NewConfigS3UpdateS3RequestWithDefaults() *ConfigS3UpdateS3Request {
 
 
 
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 
 

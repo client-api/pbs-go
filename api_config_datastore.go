@@ -320,7 +320,7 @@ func (a *ConfigDatastoreAPIService) ConfigDatastoreDeleteDatastoreExecute(r ApiC
 	if r.destroyData != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "destroy-data", r.destroyData, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "destroy-data", defaultValue, "form", "")
 		r.destroyData = &defaultValue
 	}
@@ -330,7 +330,7 @@ func (a *ConfigDatastoreAPIService) ConfigDatastoreDeleteDatastoreExecute(r ApiC
 	if r.keepJobConfigs != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "keep-job-configs", r.keepJobConfigs, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "keep-job-configs", defaultValue, "form", "")
 		r.keepJobConfigs = &defaultValue
 	}

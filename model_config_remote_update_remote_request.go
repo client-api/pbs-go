@@ -55,7 +55,7 @@ type ConfigRemoteUpdateRemoteRequest struct {
 // will change when the set of required properties is changed
 func NewConfigRemoteUpdateRemoteRequest() *ConfigRemoteUpdateRemoteRequest {
 	this := ConfigRemoteUpdateRemoteRequest{}
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 	return &this
 }
@@ -74,7 +74,7 @@ func NewConfigRemoteUpdateRemoteRequestWithDefaults() *ConfigRemoteUpdateRemoteR
 
 
 
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 
 	return &this

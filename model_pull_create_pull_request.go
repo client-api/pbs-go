@@ -87,7 +87,7 @@ type _PullCreatePullRequest PullCreatePullRequest
 func NewPullCreatePullRequest(remoteStore string, store string) *PullCreatePullRequest {
 	this := PullCreatePullRequest{}
 	this.RemoteStore = remoteStore
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 	this.Store = store
 	var workerThreads int32 = 1
@@ -113,7 +113,7 @@ func NewPullCreatePullRequestWithDefaults() *PullCreatePullRequest {
 
 
 
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 
 

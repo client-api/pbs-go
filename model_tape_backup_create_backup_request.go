@@ -72,7 +72,7 @@ type _TapeBackupCreateBackupRequest TapeBackupCreateBackupRequest
 func NewTapeBackupCreateBackupRequest(drive string, pool string, store string) *TapeBackupCreateBackupRequest {
 	this := TapeBackupCreateBackupRequest{}
 	this.Drive = drive
-	var forceMediaSet bool = 0
+	var forceMediaSet bool = false
 	this.ForceMediaSet = &forceMediaSet
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -94,7 +94,7 @@ func NewTapeBackupCreateBackupRequestWithDefaults() *TapeBackupCreateBackupReque
 
 
 
-	var forceMediaSet bool = 0
+	var forceMediaSet bool = false
 	this.ForceMediaSet = &forceMediaSet
 
 

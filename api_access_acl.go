@@ -86,7 +86,7 @@ func (a *AccessAclAPIService) AccessAclGetAclExecute(r ApiAccessAclGetAclRequest
 	if r.exact != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exact", r.exact, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exact", defaultValue, "form", "")
 		r.exact = &defaultValue
 	}

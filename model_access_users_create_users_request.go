@@ -56,7 +56,7 @@ type _AccessUsersCreateUsersRequest AccessUsersCreateUsersRequest
 // will change when the set of required properties is changed
 func NewAccessUsersCreateUsersRequest(userid string) *AccessUsersCreateUsersRequest {
 	this := AccessUsersCreateUsersRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
@@ -72,7 +72,7 @@ func NewAccessUsersCreateUsersRequestWithDefaults() *AccessUsersCreateUsersReque
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0

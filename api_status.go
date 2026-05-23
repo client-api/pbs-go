@@ -289,7 +289,7 @@ func (a *StatusAPIService) StatusGetMetricsExecute(r ApiStatusGetMetricsRequest)
 	if r.history != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "history", r.history, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "history", defaultValue, "form", "")
 		r.history = &defaultValue
 	}

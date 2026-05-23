@@ -33,7 +33,7 @@ func main() {
 	nodes := resp.GetData()
 	fmt.Printf("Found %d node(s):\n", len(nodes))
 	for _, n := range nodes {
-		fmt.Printf("  - %v (status=%v, cpu=%v, mem=%v/%v)\n",
-			n.Node, n.Status, n.Cpu, n.Mem, n.Maxmem)
+		// Other products expose a slimmer Node shape; print verbatim.
+		fmt.Printf("  - %+v\n", n)
 	}
 }

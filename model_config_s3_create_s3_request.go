@@ -77,7 +77,7 @@ func NewConfigS3CreateS3Request(accessKey string, endpoint string, id string, se
 	this.AccessKey = accessKey
 	this.Endpoint = endpoint
 	this.Id = id
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 	this.SecretKey = secretKey
 	return &this
@@ -95,7 +95,7 @@ func NewConfigS3CreateS3RequestWithDefaults() *ConfigS3CreateS3Request {
 
 
 
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 
 

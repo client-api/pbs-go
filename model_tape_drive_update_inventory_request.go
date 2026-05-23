@@ -34,9 +34,9 @@ type TapeDriveUpdateInventoryRequest struct {
 // will change when the set of required properties is changed
 func NewTapeDriveUpdateInventoryRequest() *TapeDriveUpdateInventoryRequest {
 	this := TapeDriveUpdateInventoryRequest{}
-	var catalog bool = 0
+	var catalog bool = false
 	this.Catalog = &catalog
-	var readAllLabels bool = 0
+	var readAllLabels bool = false
 	this.ReadAllLabels = &readAllLabels
 	return &this
 }
@@ -47,10 +47,10 @@ func NewTapeDriveUpdateInventoryRequest() *TapeDriveUpdateInventoryRequest {
 func NewTapeDriveUpdateInventoryRequestWithDefaults() *TapeDriveUpdateInventoryRequest {
 	this := TapeDriveUpdateInventoryRequest{}
 
-	var catalog bool = 0
+	var catalog bool = false
 	this.Catalog = &catalog
 
-	var readAllLabels bool = 0
+	var readAllLabels bool = false
 	this.ReadAllLabels = &readAllLabels
 
 	return &this

@@ -60,7 +60,7 @@ func NewConfigRemoteCreateRemoteRequest(authId string, host string, name string,
 	this.Host = host
 	this.Name = name
 	this.Password = password
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 	return &this
 }
@@ -78,7 +78,7 @@ func NewConfigRemoteCreateRemoteRequestWithDefaults() *ConfigRemoteCreateRemoteR
 
 
 
-	var useNodeProxy bool = 0
+	var useNodeProxy bool = false
 	this.UseNodeProxy = &useNodeProxy
 
 	return &this

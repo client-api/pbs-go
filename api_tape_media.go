@@ -1024,7 +1024,7 @@ func (a *TapeMediaAPIService) TapeMediaGetListExecute(r ApiTapeMediaGetListReque
 	if r.updateStatus != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "update-status", r.updateStatus, "form", "")
 	} else {
-		var defaultValue bool = 1
+		var defaultValue bool = true
 		parameterAddToHeaderOrQuery(localVarQueryParams, "update-status", defaultValue, "form", "")
 		r.updateStatus = &defaultValue
 	}

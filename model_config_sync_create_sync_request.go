@@ -112,7 +112,7 @@ func NewConfigSyncCreateSyncRequest(id string, remoteStore string, store string)
 	this := ConfigSyncCreateSyncRequest{}
 	this.Id = id
 	this.RemoteStore = remoteStore
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 	this.Store = store
 	var syncDirection PbsAdminSyncSyncDirectionEnum = PBSADMINSYNCSYNCDIRECTIONENUM_PULL
@@ -144,7 +144,7 @@ func NewConfigSyncCreateSyncRequestWithDefaults() *ConfigSyncCreateSyncRequest {
 
 
 
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 
 

@@ -31,7 +31,7 @@ type NodesSubscriptionCreateSubscriptionRequest struct {
 // will change when the set of required properties is changed
 func NewNodesSubscriptionCreateSubscriptionRequest() *NodesSubscriptionCreateSubscriptionRequest {
 	this := NodesSubscriptionCreateSubscriptionRequest{}
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 	return &this
 }
@@ -42,7 +42,7 @@ func NewNodesSubscriptionCreateSubscriptionRequest() *NodesSubscriptionCreateSub
 func NewNodesSubscriptionCreateSubscriptionRequestWithDefaults() *NodesSubscriptionCreateSubscriptionRequest {
 	this := NodesSubscriptionCreateSubscriptionRequest{}
 
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 
 	return &this

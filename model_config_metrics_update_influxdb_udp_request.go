@@ -46,7 +46,7 @@ type ConfigMetricsUpdateInfluxdbUdpRequest struct {
 // will change when the set of required properties is changed
 func NewConfigMetricsUpdateInfluxdbUdpRequest() *ConfigMetricsUpdateInfluxdbUdpRequest {
 	this := ConfigMetricsUpdateInfluxdbUdpRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var mtu int64 = 1500
 	this.Mtu = &mtu
@@ -62,7 +62,7 @@ func NewConfigMetricsUpdateInfluxdbUdpRequestWithDefaults() *ConfigMetricsUpdate
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 

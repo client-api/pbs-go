@@ -40,7 +40,7 @@ type AccessUsersCreateTokenRequest struct {
 // will change when the set of required properties is changed
 func NewAccessUsersCreateTokenRequest() *AccessUsersCreateTokenRequest {
 	this := AccessUsersCreateTokenRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
@@ -55,7 +55,7 @@ func NewAccessUsersCreateTokenRequestWithDefaults() *AccessUsersCreateTokenReque
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0

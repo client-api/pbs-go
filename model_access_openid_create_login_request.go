@@ -45,7 +45,7 @@ type _AccessOpenidCreateLoginRequest AccessOpenidCreateLoginRequest
 func NewAccessOpenidCreateLoginRequest(code string, redirectUrl string, state string) *AccessOpenidCreateLoginRequest {
 	this := AccessOpenidCreateLoginRequest{}
 	this.Code = code
-	var httpOnly bool = 0
+	var httpOnly bool = false
 	this.HttpOnly = &httpOnly
 	this.RedirectUrl = redirectUrl
 	this.State = state
@@ -59,7 +59,7 @@ func NewAccessOpenidCreateLoginRequestWithDefaults() *AccessOpenidCreateLoginReq
 	this := AccessOpenidCreateLoginRequest{}
 
 
-	var httpOnly bool = 0
+	var httpOnly bool = false
 	this.HttpOnly = &httpOnly
 
 

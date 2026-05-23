@@ -62,7 +62,7 @@ func NewAccessAclGetAclResponseDataInnerWithDefaults() *AccessAclGetAclResponseD
 	this := AccessAclGetAclResponseDataInner{}
 
 
-	var propagate bool = 1
+	var propagate bool = true
 	this.Propagate = propagate
 
 

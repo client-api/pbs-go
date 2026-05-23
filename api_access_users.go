@@ -1612,7 +1612,7 @@ func (a *AccessUsersAPIService) AccessUsersGetUsersExecute(r ApiAccessUsersGetUs
 	if r.includeTokens != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_tokens", r.includeTokens, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_tokens", defaultValue, "form", "")
 		r.includeTokens = &defaultValue
 	}

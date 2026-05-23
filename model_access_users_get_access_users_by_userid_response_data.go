@@ -53,7 +53,7 @@ type _AccessUsersGetAccessUsersByUseridResponseData AccessUsersGetAccessUsersByU
 // will change when the set of required properties is changed
 func NewAccessUsersGetAccessUsersByUseridResponseData(userid string) *AccessUsersGetAccessUsersByUseridResponseData {
 	this := AccessUsersGetAccessUsersByUseridResponseData{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
@@ -69,7 +69,7 @@ func NewAccessUsersGetAccessUsersByUseridResponseDataWithDefaults() *AccessUsers
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0

@@ -61,7 +61,7 @@ type ConfigVerifyUpdateVerifyRequest struct {
 // will change when the set of required properties is changed
 func NewConfigVerifyUpdateVerifyRequest() *ConfigVerifyUpdateVerifyRequest {
 	this := ConfigVerifyUpdateVerifyRequest{}
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -81,7 +81,7 @@ func NewConfigVerifyUpdateVerifyRequestWithDefaults() *ConfigVerifyUpdateVerifyR
 
 
 
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 
 	var maxDepth int32 = 7

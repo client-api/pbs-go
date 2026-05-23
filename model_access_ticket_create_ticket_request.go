@@ -53,7 +53,7 @@ type _AccessTicketCreateTicketRequest AccessTicketCreateTicketRequest
 // will change when the set of required properties is changed
 func NewAccessTicketCreateTicketRequest(username string) *AccessTicketCreateTicketRequest {
 	this := AccessTicketCreateTicketRequest{}
-	var httpOnly bool = 0
+	var httpOnly bool = false
 	this.HttpOnly = &httpOnly
 	this.Username = username
 	return &this
@@ -65,7 +65,7 @@ func NewAccessTicketCreateTicketRequest(username string) *AccessTicketCreateTick
 func NewAccessTicketCreateTicketRequestWithDefaults() *AccessTicketCreateTicketRequest {
 	this := AccessTicketCreateTicketRequest{}
 
-	var httpOnly bool = 0
+	var httpOnly bool = false
 	this.HttpOnly = &httpOnly
 
 

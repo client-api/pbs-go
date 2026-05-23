@@ -31,7 +31,7 @@ type NodesCertificatesCreateCertificateRequest struct {
 // will change when the set of required properties is changed
 func NewNodesCertificatesCreateCertificateRequest() *NodesCertificatesCreateCertificateRequest {
 	this := NodesCertificatesCreateCertificateRequest{}
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 	return &this
 }
@@ -42,7 +42,7 @@ func NewNodesCertificatesCreateCertificateRequest() *NodesCertificatesCreateCert
 func NewNodesCertificatesCreateCertificateRequestWithDefaults() *NodesCertificatesCreateCertificateRequest {
 	this := NodesCertificatesCreateCertificateRequest{}
 
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 
 	return &this

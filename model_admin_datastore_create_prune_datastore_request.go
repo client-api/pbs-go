@@ -55,7 +55,7 @@ type AdminDatastoreCreatePruneDatastoreRequest struct {
 // will change when the set of required properties is changed
 func NewAdminDatastoreCreatePruneDatastoreRequest() *AdminDatastoreCreatePruneDatastoreRequest {
 	this := AdminDatastoreCreatePruneDatastoreRequest{}
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
 	return &this
 }
@@ -66,7 +66,7 @@ func NewAdminDatastoreCreatePruneDatastoreRequest() *AdminDatastoreCreatePruneDa
 func NewAdminDatastoreCreatePruneDatastoreRequestWithDefaults() *AdminDatastoreCreatePruneDatastoreRequest {
 	this := AdminDatastoreCreatePruneDatastoreRequest{}
 
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
 
 

@@ -85,7 +85,7 @@ func NewPushCreatePushRequest(remote string, remoteStore string, store string) *
 	this := PushCreatePushRequest{}
 	this.Remote = remote
 	this.RemoteStore = remoteStore
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 	this.Store = store
 	var workerThreads int32 = 1
@@ -111,7 +111,7 @@ func NewPushCreatePushRequestWithDefaults() *PushCreatePushRequest {
 
 
 
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 
 

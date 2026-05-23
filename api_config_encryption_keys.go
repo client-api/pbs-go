@@ -738,7 +738,7 @@ func (a *ConfigEncryptionKeysAPIService) ConfigEncryptionKeysGetEncryptionKeysEx
 	if r.includeArchived != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include-archived", r.includeArchived, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include-archived", defaultValue, "form", "")
 		r.includeArchived = &defaultValue
 	}

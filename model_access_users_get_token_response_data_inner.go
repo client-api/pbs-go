@@ -47,7 +47,7 @@ type _AccessUsersGetTokenResponseDataInner AccessUsersGetTokenResponseDataInner
 // will change when the set of required properties is changed
 func NewAccessUsersGetTokenResponseDataInner(tokenName string, tokenid string) *AccessUsersGetTokenResponseDataInner {
 	this := AccessUsersGetTokenResponseDataInner{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
@@ -63,7 +63,7 @@ func NewAccessUsersGetTokenResponseDataInnerWithDefaults() *AccessUsersGetTokenR
 	this := AccessUsersGetTokenResponseDataInner{}
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0

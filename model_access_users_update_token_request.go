@@ -46,11 +46,11 @@ type AccessUsersUpdateTokenRequest struct {
 // will change when the set of required properties is changed
 func NewAccessUsersUpdateTokenRequest() *AccessUsersUpdateTokenRequest {
 	this := AccessUsersUpdateTokenRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
-	var regenerate bool = 0
+	var regenerate bool = false
 	this.Regenerate = &regenerate
 	return &this
 }
@@ -64,13 +64,13 @@ func NewAccessUsersUpdateTokenRequestWithDefaults() *AccessUsersUpdateTokenReque
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0
 	this.Expire = &expire
 
-	var regenerate bool = 0
+	var regenerate bool = false
 	this.Regenerate = &regenerate
 
 	return &this

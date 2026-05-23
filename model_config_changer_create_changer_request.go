@@ -44,7 +44,7 @@ type _ConfigChangerCreateChangerRequest ConfigChangerCreateChangerRequest
 // will change when the set of required properties is changed
 func NewConfigChangerCreateChangerRequest(name string, path string) *ConfigChangerCreateChangerRequest {
 	this := ConfigChangerCreateChangerRequest{}
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 	this.Name = name
 	this.Path = path
@@ -57,7 +57,7 @@ func NewConfigChangerCreateChangerRequest(name string, path string) *ConfigChang
 func NewConfigChangerCreateChangerRequestWithDefaults() *ConfigChangerCreateChangerRequest {
 	this := ConfigChangerCreateChangerRequest{}
 
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 
 

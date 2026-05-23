@@ -81,14 +81,14 @@ type _ConfigAccessGetLdapResponseDataInner ConfigAccessGetLdapResponseDataInner
 func NewConfigAccessGetLdapResponseDataInner(baseDn string, realm string, server1 string, userAttr string) *ConfigAccessGetLdapResponseDataInner {
 	this := ConfigAccessGetLdapResponseDataInner{}
 	this.BaseDn = baseDn
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	var mode PbsModeEnum = PBSMODEENUM_LDAP
 	this.Mode = &mode
 	this.Realm = realm
 	this.Server1 = server1
 	this.UserAttr = userAttr
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 	return &this
 }
@@ -103,7 +103,7 @@ func NewConfigAccessGetLdapResponseDataInnerWithDefaults() *ConfigAccessGetLdapR
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 
@@ -118,7 +118,7 @@ func NewConfigAccessGetLdapResponseDataInnerWithDefaults() *ConfigAccessGetLdapR
 
 
 
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 
 	return &this

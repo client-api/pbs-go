@@ -53,7 +53,7 @@ type _TapeChangerGetChangerResponseDataInner TapeChangerGetChangerResponseDataIn
 // will change when the set of required properties is changed
 func NewTapeChangerGetChangerResponseDataInner(name string, path string) *TapeChangerGetChangerResponseDataInner {
 	this := TapeChangerGetChangerResponseDataInner{}
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 	this.Name = name
 	this.Path = path
@@ -66,7 +66,7 @@ func NewTapeChangerGetChangerResponseDataInner(name string, path string) *TapeCh
 func NewTapeChangerGetChangerResponseDataInnerWithDefaults() *TapeChangerGetChangerResponseDataInner {
 	this := TapeChangerGetChangerResponseDataInner{}
 
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 
 

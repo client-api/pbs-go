@@ -517,7 +517,7 @@ func (a *TapeChangerAPIService) TapeChangerGetStatusExecute(r ApiTapeChangerGetS
 	if r.cache != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cache", r.cache, "form", "")
 	} else {
-		var defaultValue bool = 1
+		var defaultValue bool = true
 		parameterAddToHeaderOrQuery(localVarQueryParams, "cache", defaultValue, "form", "")
 		r.cache = &defaultValue
 	}

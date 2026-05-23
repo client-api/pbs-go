@@ -74,7 +74,7 @@ func NewConfigS3GetS3ResponseDataInner(accessKey string, endpoint string, id str
 	this.AccessKey = accessKey
 	this.Endpoint = endpoint
 	this.Id = id
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 	return &this
 }
@@ -91,7 +91,7 @@ func NewConfigS3GetS3ResponseDataInnerWithDefaults() *ConfigS3GetS3ResponseDataI
 
 
 
-	var pathStyle bool = 0
+	var pathStyle bool = false
 	this.PathStyle = &pathStyle
 
 

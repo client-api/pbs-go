@@ -62,11 +62,11 @@ type _AccessUsersGetUsersResponseDataInner AccessUsersGetUsersResponseDataInner
 // will change when the set of required properties is changed
 func NewAccessUsersGetUsersResponseDataInner(userid string) *AccessUsersGetUsersResponseDataInner {
 	this := AccessUsersGetUsersResponseDataInner{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
-	var totpLocked bool = 0
+	var totpLocked bool = false
 	this.TotpLocked = &totpLocked
 	this.Userid = userid
 	return &this
@@ -80,7 +80,7 @@ func NewAccessUsersGetUsersResponseDataInnerWithDefaults() *AccessUsersGetUsersR
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0
@@ -90,7 +90,7 @@ func NewAccessUsersGetUsersResponseDataInnerWithDefaults() *AccessUsersGetUsersR
 
 
 
-	var totpLocked bool = 0
+	var totpLocked bool = false
 	this.TotpLocked = &totpLocked
 
 

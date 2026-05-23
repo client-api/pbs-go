@@ -47,7 +47,7 @@ type _ConfigMetricsGetInfluxdbUdpResponseDataInner ConfigMetricsGetInfluxdbUdpRe
 // will change when the set of required properties is changed
 func NewConfigMetricsGetInfluxdbUdpResponseDataInner(host string, name string) *ConfigMetricsGetInfluxdbUdpResponseDataInner {
 	this := ConfigMetricsGetInfluxdbUdpResponseDataInner{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	this.Host = host
 	var mtu int64 = 1500
@@ -63,7 +63,7 @@ func NewConfigMetricsGetInfluxdbUdpResponseDataInnerWithDefaults() *ConfigMetric
 	this := ConfigMetricsGetInfluxdbUdpResponseDataInner{}
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 

@@ -49,7 +49,7 @@ func NewAdminDatastoreCreateMoveGroupRequest(backupId string, backupType PbsBack
 	this := AdminDatastoreCreateMoveGroupRequest{}
 	this.BackupId = backupId
 	this.BackupType = backupType
-	var mergeGroup bool = 1
+	var mergeGroup bool = true
 	this.MergeGroup = &mergeGroup
 	return &this
 }
@@ -62,7 +62,7 @@ func NewAdminDatastoreCreateMoveGroupRequestWithDefaults() *AdminDatastoreCreate
 
 
 
-	var mergeGroup bool = 1
+	var mergeGroup bool = true
 	this.MergeGroup = &mergeGroup
 
 

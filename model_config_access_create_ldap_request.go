@@ -84,14 +84,14 @@ type _ConfigAccessCreateLdapRequest ConfigAccessCreateLdapRequest
 func NewConfigAccessCreateLdapRequest(baseDn string, realm string, server1 string, userAttr string) *ConfigAccessCreateLdapRequest {
 	this := ConfigAccessCreateLdapRequest{}
 	this.BaseDn = baseDn
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	var mode PbsModeEnum = PBSMODEENUM_LDAP
 	this.Mode = &mode
 	this.Realm = realm
 	this.Server1 = server1
 	this.UserAttr = userAttr
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 	return &this
 }
@@ -106,7 +106,7 @@ func NewConfigAccessCreateLdapRequestWithDefaults() *ConfigAccessCreateLdapReque
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 
@@ -122,7 +122,7 @@ func NewConfigAccessCreateLdapRequestWithDefaults() *ConfigAccessCreateLdapReque
 
 
 
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 
 	return &this

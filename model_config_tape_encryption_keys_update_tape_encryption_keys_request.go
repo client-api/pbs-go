@@ -50,7 +50,7 @@ type _ConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequest ConfigTapeEncrypti
 // will change when the set of required properties is changed
 func NewConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequest(hint string, newPassword string) *ConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequest {
 	this := ConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequest{}
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 	this.Hint = hint
 	var kdf PbsKdfEnum = PBSKDFENUM_SCRYPT
@@ -66,7 +66,7 @@ func NewConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequestWithDefaults() *C
 	this := ConfigTapeEncryptionKeysUpdateTapeEncryptionKeysRequest{}
 
 
-	var force bool = 0
+	var force bool = false
 	this.Force = &force
 
 

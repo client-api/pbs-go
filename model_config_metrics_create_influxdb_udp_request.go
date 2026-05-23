@@ -47,7 +47,7 @@ type _ConfigMetricsCreateInfluxdbUdpRequest ConfigMetricsCreateInfluxdbUdpReques
 // will change when the set of required properties is changed
 func NewConfigMetricsCreateInfluxdbUdpRequest(host string, name string) *ConfigMetricsCreateInfluxdbUdpRequest {
 	this := ConfigMetricsCreateInfluxdbUdpRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	this.Host = host
 	var mtu int64 = 1500
@@ -63,7 +63,7 @@ func NewConfigMetricsCreateInfluxdbUdpRequestWithDefaults() *ConfigMetricsCreate
 	this := ConfigMetricsCreateInfluxdbUdpRequest{}
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 

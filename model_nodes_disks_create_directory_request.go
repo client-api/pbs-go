@@ -47,11 +47,11 @@ type _NodesDisksCreateDirectoryRequest NodesDisksCreateDirectoryRequest
 // will change when the set of required properties is changed
 func NewNodesDisksCreateDirectoryRequest(disk string, name string) *NodesDisksCreateDirectoryRequest {
 	this := NodesDisksCreateDirectoryRequest{}
-	var addDatastore bool = 0
+	var addDatastore bool = false
 	this.AddDatastore = &addDatastore
 	this.Disk = disk
 	this.Name = name
-	var removableDatastore bool = 0
+	var removableDatastore bool = false
 	this.RemovableDatastore = &removableDatastore
 	return &this
 }
@@ -62,13 +62,13 @@ func NewNodesDisksCreateDirectoryRequest(disk string, name string) *NodesDisksCr
 func NewNodesDisksCreateDirectoryRequestWithDefaults() *NodesDisksCreateDirectoryRequest {
 	this := NodesDisksCreateDirectoryRequest{}
 
-	var addDatastore bool = 0
+	var addDatastore bool = false
 	this.AddDatastore = &addDatastore
 
 
 
 
-	var removableDatastore bool = 0
+	var removableDatastore bool = false
 	this.RemovableDatastore = &removableDatastore
 
 	return &this

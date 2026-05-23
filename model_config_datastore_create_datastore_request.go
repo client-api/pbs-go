@@ -107,10 +107,10 @@ func NewConfigDatastoreCreateDatastoreRequest(name string, path string) *ConfigD
 	this.Name = name
 	var notificationMode PbsNotificationModeEnum = PBSNOTIFICATIONMODEENUM_NOTIFICATION_SYSTEM
 	this.NotificationMode = &notificationMode
-	var overwriteInUse bool = 0
+	var overwriteInUse bool = false
 	this.OverwriteInUse = &overwriteInUse
 	this.Path = path
-	var reuseDatastore bool = 0
+	var reuseDatastore bool = false
 	this.ReuseDatastore = &reuseDatastore
 	return &this
 }
@@ -141,12 +141,12 @@ func NewConfigDatastoreCreateDatastoreRequestWithDefaults() *ConfigDatastoreCrea
 
 
 
-	var overwriteInUse bool = 0
+	var overwriteInUse bool = false
 	this.OverwriteInUse = &overwriteInUse
 
 
 
-	var reuseDatastore bool = 0
+	var reuseDatastore bool = false
 	this.ReuseDatastore = &reuseDatastore
 
 

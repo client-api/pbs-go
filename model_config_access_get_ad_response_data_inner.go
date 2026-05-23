@@ -77,13 +77,13 @@ type _ConfigAccessGetAdResponseDataInner ConfigAccessGetAdResponseDataInner
 // will change when the set of required properties is changed
 func NewConfigAccessGetAdResponseDataInner(realm string, server1 string) *ConfigAccessGetAdResponseDataInner {
 	this := ConfigAccessGetAdResponseDataInner{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	var mode PbsModeEnum = PBSMODEENUM_LDAP
 	this.Mode = &mode
 	this.Realm = realm
 	this.Server1 = server1
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 	return &this
 }
@@ -98,7 +98,7 @@ func NewConfigAccessGetAdResponseDataInnerWithDefaults() *ConfigAccessGetAdRespo
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 
@@ -112,7 +112,7 @@ func NewConfigAccessGetAdResponseDataInnerWithDefaults() *ConfigAccessGetAdRespo
 
 
 
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 
 	return &this

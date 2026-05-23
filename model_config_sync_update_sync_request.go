@@ -109,7 +109,7 @@ type ConfigSyncUpdateSyncRequest struct {
 // will change when the set of required properties is changed
 func NewConfigSyncUpdateSyncRequest() *ConfigSyncUpdateSyncRequest {
 	this := ConfigSyncUpdateSyncRequest{}
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 	var syncDirection PbsAdminSyncSyncDirectionEnum = PBSADMINSYNCSYNCDIRECTIONENUM_PULL
 	this.SyncDirection = &syncDirection
@@ -141,7 +141,7 @@ func NewConfigSyncUpdateSyncRequestWithDefaults() *ConfigSyncUpdateSyncRequest {
 
 
 
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 
 

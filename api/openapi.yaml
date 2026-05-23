@@ -215,7 +215,7 @@ paths:
         name: exact
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Access control path.
@@ -995,7 +995,7 @@ paths:
         name: include_tokens
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       responses:
@@ -2250,7 +2250,7 @@ paths:
         name: error-on-protected
         required: false
         schema:
-          default: 1
+          default: true
           type: boolean
         style: form
       - description: Namespace.
@@ -2492,7 +2492,7 @@ paths:
         name: delete-groups
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Return error when namespace cannot be deleted because of protected
@@ -2502,7 +2502,7 @@ paths:
         name: error-on-protected
         required: false
         schema:
-          default: 1
+          default: true
           type: boolean
         style: form
       - description: Namespace.
@@ -3325,7 +3325,7 @@ paths:
         name: verbose
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       responses:
@@ -5822,7 +5822,7 @@ paths:
         name: force
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - $ref: "#/components/parameters/PbsName"
@@ -6546,7 +6546,7 @@ paths:
         name: destroy-data
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Prevent changes if current configuration file has different SHA256
@@ -6566,7 +6566,7 @@ paths:
         name: keep-job-configs
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - $ref: "#/components/parameters/PbsConfigDatastoreName"
@@ -6905,7 +6905,7 @@ paths:
         name: include-archived
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       responses:
@@ -11429,7 +11429,7 @@ paths:
         name: restart
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       responses:
@@ -11844,7 +11844,7 @@ paths:
         name: include-partitions
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - $ref: "#/components/parameters/PbsNodesAptNode"
@@ -11854,7 +11854,7 @@ paths:
         name: skipsmart
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: What a block device (disk) is used for.
@@ -13333,7 +13333,7 @@ paths:
         name: errors
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Only list this amount of tasks. (0 means no limit)
@@ -13353,7 +13353,7 @@ paths:
         name: running
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Only list tasks since this UNIX epoch.
@@ -13533,7 +13533,7 @@ paths:
         name: download
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: The amount of lines to read from the tasklog. Setting this parameter
@@ -14290,7 +14290,7 @@ paths:
         name: history
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       - description: Only return values with a timestamp > start-time. Only has an
@@ -14557,7 +14557,7 @@ paths:
         name: cache
         required: false
         schema:
-          default: 1
+          default: true
           type: boolean
         style: form
       - $ref: "#/components/parameters/PbsConfigChangerName"
@@ -14667,7 +14667,7 @@ paths:
         name: query-activity
         required: false
         schema:
-          default: 0
+          default: false
           type: boolean
         style: form
       responses:
@@ -15775,7 +15775,7 @@ paths:
         name: update-status
         required: false
         schema:
-          default: 1
+          default: true
           type: boolean
         style: form
       - description: Tape Changer Identifier.
@@ -16666,12 +16666,12 @@ components:
         data:
         - path: path
           roleid: ""
-          propagate: 1
+          propagate: true
           ugid: ugid
           ugid_type: ""
         - path: path
           roleid: ""
-          propagate: 1
+          propagate: true
           ugid: ugid
           ugid_type: ""
         changes: "{}"
@@ -16696,7 +16696,7 @@ components:
         role: ""
         auth-id: auth-id
         digest: digest
-        propagate: 1
+        propagate: true
         delete: true
         group: group
       properties:
@@ -16729,7 +16729,7 @@ components:
           pattern: "/^(?:/|(?:/(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*))+)$/"
           type: string
         propagate:
-          default: 1
+          default: true
           description: Allow to propagate (inherit) permissions.
           type: boolean
         role:
@@ -16772,11 +16772,11 @@ components:
       example:
         total: 0
         data:
-        - default: 0
+        - default: false
           comment: comment
           realm: realm
           type: ""
-        - default: 0
+        - default: false
           comment: comment
           realm: realm
           type: ""
@@ -16830,10 +16830,10 @@ components:
       example:
         enable-new: true
         remove-vanished: ""
-        dry-run: 0
+        dry-run: false
       properties:
         dry-run:
-          default: 0
+          default: false
           description: "If set, do not create/delete anything"
           type: boolean
         enable-new:
@@ -16924,7 +16924,7 @@ components:
       additionalProperties: false
       example:
         code: code
-        http-only: 0
+        http-only: false
         redirect-url: redirect-url
         state: state
       properties:
@@ -16932,7 +16932,7 @@ components:
           description: OpenId authorization code.
           type: string
         http-only:
-          default: 0
+          default: false
           description: Whether the HttpOnly authentication flow should be used.
           type: boolean
         redirect-url:
@@ -17297,14 +17297,14 @@ components:
       example:
         path: path
         password: password
-        http-only: 0
+        http-only: false
         tfa-challenge: tfa-challenge
         port: 5248
         privs: privs
         username: username
       properties:
         http-only:
-          default: 0
+          default: false
           description: Whether the HttpOnly authentication flow should be used.
           type: boolean
         password:
@@ -17360,37 +17360,37 @@ components:
         total: 5
         data:
         - firstname: firstname
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
           tokens:
           - tokenid: tokenid
-            enable: 1
+            enable: true
             expire: 0
             comment: comment
           - tokenid: tokenid
-            enable: 1
+            enable: true
             expire: 0
             comment: comment
-          totp-locked: 0
+          totp-locked: false
           userid: userid
           email: email
           tfa-locked-until: 6
           lastname: lastname
         - firstname: firstname
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
           tokens:
           - tokenid: tokenid
-            enable: 1
+            enable: true
             expire: 0
             comment: comment
           - tokenid: tokenid
-            enable: 1
+            enable: true
             expire: 0
             comment: comment
-          totp-locked: 0
+          totp-locked: false
           userid: userid
           email: email
           tfa-locked-until: 6
@@ -17415,7 +17415,7 @@ components:
       example:
         firstname: firstname
         password: password
-        enable: 1
+        enable: true
         expire: 0
         comment: comment
         userid: userid
@@ -17434,7 +17434,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -17508,7 +17508,7 @@ components:
         total: 6
         data:
           firstname: firstname
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
           userid: userid
@@ -17539,7 +17539,7 @@ components:
       example:
         firstname: firstname
         password: password
-        enable: 1
+        enable: true
         expire: 0
         digest: digest
         comment: comment
@@ -17571,7 +17571,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -17622,12 +17622,12 @@ components:
         total: 6
         data:
         - tokenid: tokenid
-          enable: 1
+          enable: true
           token-name: token-name
           expire: 0
           comment: comment
         - tokenid: tokenid
-          enable: 1
+          enable: true
           token-name: token-name
           expire: 0
           comment: comment
@@ -17667,7 +17667,7 @@ components:
         total: 0
         data:
           tokenid: tokenid
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
         changes: "{}"
@@ -17686,7 +17686,7 @@ components:
     AccessUsersCreateTokenRequest:
       additionalProperties: false
       example:
-        enable: 1
+        enable: true
         expire: 0
         digest: digest
         comment: comment
@@ -17702,7 +17702,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -17739,8 +17739,8 @@ components:
     AccessUsersUpdateTokenRequest:
       additionalProperties: false
       example:
-        regenerate: 0
-        enable: 1
+        regenerate: false
+        enable: true
         expire: 0
         digest: digest
         comment: comment
@@ -17764,7 +17764,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -17776,7 +17776,7 @@ components:
           minimum: 0
           type: integer
         regenerate:
-          default: 0
+          default: false
           description: Regenerate token secret while keeping permissions.
           type: boolean
     AccessUsersUpdateTokenResponse:
@@ -18319,7 +18319,7 @@ components:
       example:
         target-ns: target-ns
         ns: ns
-        merge-group: 1
+        merge-group: true
         backup-type: ""
         backup-id: backup-id
       properties:
@@ -18332,7 +18332,7 @@ components:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
           description: Backup types.
         merge-group:
-          default: 1
+          default: true
           description: "If the group already exists in the target namespace, merge\
             \ snapshots into it. Requires matching ownership and non-overlapping snapshot\
             \ times."
@@ -18378,11 +18378,11 @@ components:
         max-depth: 0
         target-ns: target-ns
         ns: ns
-        delete-source: 1
-        merge-groups: 1
+        delete-source: true
+        merge-groups: true
       properties:
         delete-source:
-          default: 1
+          default: true
           description: Remove the source namespace after moving all contents. Defaults
             to true.
           type: boolean
@@ -18394,7 +18394,7 @@ components:
           minimum: 0
           type: integer
         merge-groups:
-          default: 1
+          default: true
           description: "If a group with the same name already exists in the target\
             \ namespace, merge snapshots into it. Requires matching ownership and\
             \ non-overlapping snapshot times."
@@ -18654,14 +18654,14 @@ components:
       example:
         keep-yearly: 1
         keep-weekly: 1
-        use-task: 0
+        use-task: false
         ns: ns
         backup-type: ""
         keep-daily: 1
         keep-monthly: 1
         backup-id: backup-id
         keep-hourly: 1
-        dry-run: 0
+        dry-run: false
         keep-last: 1
       properties:
         backup-id:
@@ -18673,7 +18673,7 @@ components:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
           description: Backup types.
         dry-run:
-          default: 0
+          default: false
           description: "Just show what prune would do, but do not delete anything."
           type: boolean
         keep-daily:
@@ -18713,7 +18713,7 @@ components:
             -]*))?$/"
           type: string
         use-task:
-          default: 0
+          default: false
           description: Spins up an asynchronous task that does the work.
           type: boolean
       required:
@@ -18756,11 +18756,11 @@ components:
         keep-daily: 1
         keep-monthly: 1
         keep-hourly: 1
-        dry-run: 0
+        dry-run: false
         keep-last: 1
       properties:
         dry-run:
-          default: 0
+          default: false
           description: "Just show what prune would do, but do not delete anything."
           type: boolean
         keep-daily:
@@ -19089,7 +19089,7 @@ components:
       example:
         max-depth: 4
         verify-threads: 18
-        ignore-verified: 1
+        ignore-verified: true
         backup-time: 1
         ns: ns
         backup-type: ""
@@ -19111,7 +19111,7 @@ components:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
           description: Backup types.
         ignore-verified:
-          default: 1
+          default: true
           description: Do not verify backups that are already verified if their verification
             is not outdated.
           type: boolean
@@ -19336,7 +19336,7 @@ components:
           keep-yearly: 1
           schedule: schedule
           keep-weekly: 1
-          disable: 0
+          disable: false
           comment: comment
           id: id
         - last-run-endtime: 7
@@ -19353,7 +19353,7 @@ components:
           keep-yearly: 1
           schedule: schedule
           keep-weekly: 1
-          disable: 0
+          disable: false
           comment: comment
           id: id
         changes: "{}"
@@ -19496,7 +19496,7 @@ components:
           remote-store: remote-store
           last-run-endtime: 0
           next-run: 1
-          remove-vanished: 0
+          remove-vanished: false
           run-on-mount: true
           last-run-state: last-run-state
           resync-corrupt: true
@@ -19530,7 +19530,7 @@ components:
           remote-store: remote-store
           last-run-endtime: 0
           next-run: 1
-          remove-vanished: 0
+          remove-vanished: false
           run-on-mount: true
           last-run-state: last-run-state
           resync-corrupt: true
@@ -19657,7 +19657,7 @@ components:
         data:
         - last-run-endtime: 0
           max-depth: 4
-          ignore-verified: 1
+          ignore-verified: true
           next-run: 1
           ns: ns
           read-threads: 18
@@ -19671,7 +19671,7 @@ components:
           id: id
         - last-run-endtime: 0
           max-depth: 4
-          ignore-verified: 1
+          ignore-verified: true
           next-run: 1
           ns: ns
           read-threads: 18
@@ -20313,12 +20313,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         - server2: server2
@@ -20328,12 +20328,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -20361,13 +20361,13 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         password: password
         user-classes: ""
         port: 5248
         capath: capath
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
         realm: realm
       properties:
@@ -20394,7 +20394,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         filter:
@@ -20443,7 +20443,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       required:
@@ -20498,12 +20498,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -20547,14 +20547,14 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         password: password
         user-classes: ""
         port: 5248
         capath: capath
         digest: digest
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
       properties:
         base-dn:
@@ -20580,7 +20580,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         delete:
@@ -20633,7 +20633,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       x-pbs-polymorphic:
@@ -20653,12 +20653,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -20686,12 +20686,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         - user-attr: user-attr
@@ -20702,12 +20702,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -20736,13 +20736,13 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         password: password
         user-classes: ""
         port: 5248
         capath: capath
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
         realm: realm
       properties:
@@ -20769,7 +20769,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         filter:
@@ -20822,7 +20822,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       required:
@@ -20880,12 +20880,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -20915,14 +20915,14 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         password: password
         user-classes: ""
         port: 5248
         capath: capath
         digest: digest
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
       properties:
         base-dn:
@@ -20948,7 +20948,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         delete:
@@ -21005,7 +21005,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       x-pbs-polymorphic:
@@ -21026,12 +21026,12 @@ components:
           filter: filter
           mode: ""
           bind-dn: bind-dn
-          default: 0
+          default: false
           user-classes: ""
           port: 5248
           capath: capath
           sync-defaults-options: ""
-          verify: 0
+          verify: false
           comment: comment
           realm: realm
         changes: "{}"
@@ -21093,8 +21093,8 @@ components:
         total: 0
         data:
         - acr-values: ""
-          default: 0
-          autocreate: 0
+          default: false
+          autocreate: false
           issuer-url: issuer-url
           client-key: client-key
           comment: comment
@@ -21104,8 +21104,8 @@ components:
           prompt: prompt
           username-claim: username-claim
         - acr-values: ""
-          default: 0
-          autocreate: 0
+          default: false
+          autocreate: false
           issuer-url: issuer-url
           client-key: client-key
           comment: comment
@@ -21133,8 +21133,8 @@ components:
       additionalProperties: false
       example:
         acr-values: ""
-        default: 0
-        autocreate: 0
+        default: false
+        autocreate: false
         issuer-url: issuer-url
         client-key: client-key
         comment: comment
@@ -21149,7 +21149,7 @@ components:
           - $ref: "#/components/schemas/PbsAcrValuesField"
           description: OpenID ACR List
         autocreate:
-          default: 0
+          default: false
           description: Automatically create users if they do not exist.
           type: boolean
         client-id:
@@ -21164,7 +21164,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         issuer-url:
@@ -21234,8 +21234,8 @@ components:
         total: 0
         data:
           acr-values: ""
-          default: 0
-          autocreate: 0
+          default: false
+          autocreate: false
           issuer-url: issuer-url
           client-key: client-key
           comment: comment
@@ -21271,8 +21271,8 @@ components:
       additionalProperties: false
       example:
         acr-values: ""
-        default: 0
-        autocreate: 0
+        default: false
+        autocreate: false
         digest: digest
         issuer-url: issuer-url
         client-key: client-key
@@ -21289,7 +21289,7 @@ components:
           - $ref: "#/components/schemas/PbsAcrValuesField"
           description: OpenID ACR List
         autocreate:
-          default: 0
+          default: false
           description: Automatically create users if they do not exist.
           type: boolean
         client-id:
@@ -21304,7 +21304,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         delete:
@@ -21333,8 +21333,8 @@ components:
         total: 0
         data:
           acr-values: ""
-          default: 0
-          autocreate: 0
+          default: false
+          autocreate: false
           issuer-url: issuer-url
           client-key: client-key
           comment: comment
@@ -21360,7 +21360,7 @@ components:
       example:
         total: 0
         data:
-          default: 0
+          default: false
           comment: comment
           realm: realm
           type: ""
@@ -21385,7 +21385,7 @@ components:
     ConfigAccessUpdatePamRequest:
       additionalProperties: false
       example:
-        default: 0
+        default: false
         digest: digest
         comment: comment
         delete:
@@ -21398,7 +21398,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         delete:
@@ -21415,7 +21415,7 @@ components:
       example:
         total: 0
         data:
-          default: 0
+          default: false
           comment: comment
           realm: realm
           type: ""
@@ -21436,7 +21436,7 @@ components:
       example:
         total: 0
         data:
-          default: 0
+          default: false
           comment: comment
           realm: realm
           type: ""
@@ -21457,7 +21457,7 @@ components:
       example:
         total: 0
         data:
-          default: 0
+          default: false
           comment: comment
           realm: realm
           type: ""
@@ -21831,7 +21831,7 @@ components:
       example:
         validation-delay: 13838
         data: data
-        disable: 0
+        disable: false
         api: api
         id: id
         type: type
@@ -21843,7 +21843,7 @@ components:
           description: DNS plugin data (base64 encoded with padding).
           type: string
         disable:
-          default: 0
+          default: false
           description: Flag to disable the config.
           type: boolean
         id:
@@ -21934,7 +21934,7 @@ components:
       example:
         validation-delay: 13838
         data: data
-        disable: 0
+        disable: false
         digest: digest
         api: api
         delete:
@@ -21958,7 +21958,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         disable:
-          default: 0
+          default: false
           description: Flag to disable the config.
           type: boolean
         validation-delay:
@@ -22030,11 +22030,11 @@ components:
         data:
         - path: path
           name: name
-          eject-before-unload: 0
+          eject-before-unload: false
           export-slots: ""
         - path: path
           name: name
-          eject-before-unload: 0
+          eject-before-unload: false
           export-slots: ""
         changes: "{}"
       properties:
@@ -22056,11 +22056,11 @@ components:
       example:
         path: path
         name: name
-        eject-before-unload: 0
+        eject-before-unload: false
         export-slots: ""
       properties:
         eject-before-unload:
-          default: 0
+          default: false
           description: "if set to true, tapes are ejected manually before unloading"
           type: boolean
         export-slots:
@@ -22120,7 +22120,7 @@ components:
         data:
           path: path
           name: name
-          eject-before-unload: 0
+          eject-before-unload: false
           export-slots: ""
         changes: "{}"
       properties:
@@ -22148,7 +22148,7 @@ components:
         delete:
         - export-slots
         - export-slots
-        eject-before-unload: 0
+        eject-before-unload: false
         export-slots: ""
       properties:
         delete:
@@ -22162,7 +22162,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         eject-before-unload:
-          default: 0
+          default: false
           description: "if set to true, tapes are ejected manually before unloading"
           type: boolean
         export-slots:
@@ -22285,9 +22285,9 @@ components:
       example:
         tuning: ""
         prune-schedule: prune-schedule
-        reuse-datastore: 0
+        reuse-datastore: false
         counter-reset-schedule: counter-reset-schedule
-        overwrite-in-use: 0
+        overwrite-in-use: false
         keep-daily: 1
         keep-monthly: 1
         notification-thresholds: ""
@@ -22400,7 +22400,7 @@ components:
           pattern: "/^(?:[^\\s:/[:cntrl:]]+)@(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         overwrite-in-use:
-          default: 0
+          default: false
           description: Overwrite in use marker (S3 backed datastores only).
           type: boolean
         path:
@@ -22414,7 +22414,7 @@ components:
           type: string
           x-pbs-typetext: <calendar-event>
         reuse-datastore:
-          default: 0
+          default: false
           description: Re-use existing datastore directory.
           type: boolean
         tuning:
@@ -23158,21 +23158,21 @@ components:
         total: 6
         data:
         - bucket: proxmox
-          enable: 1
+          enable: true
           max-body-size: 0
           organization: proxmox
           name: name
           comment: comment
-          verify-tls: 1
+          verify-tls: true
           url: url
           token: token
         - bucket: proxmox
-          enable: 1
+          enable: true
           max-body-size: 0
           organization: proxmox
           name: name
           comment: comment
-          verify-tls: 1
+          verify-tls: true
           url: url
           token: token
         changes: "{}"
@@ -23194,12 +23194,12 @@ components:
       additionalProperties: false
       example:
         bucket: proxmox
-        enable: 1
+        enable: true
         max-body-size: 0
         organization: proxmox
         name: name
         comment: comment
-        verify-tls: 1
+        verify-tls: true
         url: url
         token: token
       properties:
@@ -23215,7 +23215,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         max-body-size:
@@ -23280,7 +23280,7 @@ components:
             .){3}(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9])?[0-9]))|(?:[0-9a-fA-F]{1,4}):(?:[0-9a-fA-F]{1,4}))))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,5}(?:[0-9a-fA-F]{1,4}))?::)(?:[0-9a-fA-F]{1,4}))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,6}(?:[0-9a-fA-F]{1,4}))?::))))(?:/[^\0\
             -\x1f\x7f]*)?$/"
         verify-tls:
-          default: 1
+          default: true
           description: "If true, the certificate will be validated."
           type: boolean
       required:
@@ -23323,12 +23323,12 @@ components:
         total: 0
         data:
           bucket: proxmox
-          enable: 1
+          enable: true
           max-body-size: 0
           organization: proxmox
           name: name
           comment: comment
-          verify-tls: 1
+          verify-tls: true
           url: url
           token: token
         changes: "{}"
@@ -23358,12 +23358,12 @@ components:
       additionalProperties: false
       example:
         bucket: proxmox
-        enable: 1
+        enable: true
         max-body-size: 0
         organization: proxmox
         digest: digest
         comment: comment
-        verify-tls: 1
+        verify-tls: true
         delete:
         - enable
         - enable
@@ -23392,7 +23392,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         max-body-size:
@@ -23451,7 +23451,7 @@ components:
             .){3}(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9])?[0-9]))|(?:[0-9a-fA-F]{1,4}):(?:[0-9a-fA-F]{1,4}))))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,5}(?:[0-9a-fA-F]{1,4}))?::)(?:[0-9a-fA-F]{1,4}))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,6}(?:[0-9a-fA-F]{1,4}))?::))))(?:/[^\0\
             -\x1f\x7f]*)?$/"
         verify-tls:
-          default: 1
+          default: true
           description: "If true, the certificate will be validated."
           type: boolean
     ConfigMetricsUpdateInfluxdbHttpResponse:
@@ -23474,12 +23474,12 @@ components:
       example:
         total: 6
         data:
-        - enable: 1
+        - enable: true
           host: host
           name: name
           comment: comment
           mtu: 0
-        - enable: 1
+        - enable: true
           host: host
           name: name
           comment: comment
@@ -23502,7 +23502,7 @@ components:
     ConfigMetricsCreateInfluxdbUdpRequest:
       additionalProperties: false
       example:
-        enable: 1
+        enable: true
         host: host
         name: name
         comment: comment
@@ -23514,7 +23514,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         host:
@@ -23581,7 +23581,7 @@ components:
       example:
         total: 0
         data:
-          enable: 1
+          enable: true
           host: host
           name: name
           comment: comment
@@ -23608,7 +23608,7 @@ components:
     ConfigMetricsUpdateInfluxdbUdpRequest:
       additionalProperties: false
       example:
-        enable: 1
+        enable: true
         digest: digest
         host: host
         comment: comment
@@ -23633,7 +23633,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         host:
@@ -25328,7 +25328,7 @@ components:
           keep-yearly: 1
           schedule: schedule
           keep-weekly: 1
-          disable: 0
+          disable: false
           comment: comment
           id: id
         - max-depth: 4
@@ -25341,7 +25341,7 @@ components:
           keep-yearly: 1
           schedule: schedule
           keep-weekly: 1
-          disable: 0
+          disable: false
           comment: comment
           id: id
         changes: "{}"
@@ -25372,7 +25372,7 @@ components:
         keep-yearly: 1
         schedule: schedule
         keep-weekly: 1
-        disable: 0
+        disable: false
         comment: comment
         id: id
       properties:
@@ -25382,7 +25382,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         disable:
-          default: 0
+          default: false
           description: Disable this job.
           type: boolean
         id:
@@ -25494,7 +25494,7 @@ components:
           keep-yearly: 1
           schedule: schedule
           keep-weekly: 1
-          disable: 0
+          disable: false
           comment: comment
           id: id
         changes: "{}"
@@ -25539,7 +25539,7 @@ components:
         keep-yearly: 1
         schedule: schedule
         keep-weekly: 1
-        disable: 0
+        disable: false
         digest: digest
         comment: comment
       properties:
@@ -25559,7 +25559,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         disable:
-          default: 0
+          default: false
           description: Disable this job.
           type: boolean
         keep-daily:
@@ -25641,14 +25641,14 @@ components:
           host: host
           name: name
           comment: comment
-          use-node-proxy: 0
+          use-node-proxy: false
         - port: 0
           auth-id: auth-id
           fingerprint: fingerprint
           host: host
           name: name
           comment: comment
-          use-node-proxy: 0
+          use-node-proxy: false
         changes: "{}"
       properties:
         data:
@@ -25674,7 +25674,7 @@ components:
         host: host
         name: name
         comment: comment
-        use-node-proxy: 0
+        use-node-proxy: false
       properties:
         auth-id:
           description: Authentication ID
@@ -25723,7 +25723,7 @@ components:
           format: int64
           type: integer
         use-node-proxy:
-          default: 0
+          default: false
           description: Use the http proxy configuration of the node for remote connections.
           type: boolean
       required:
@@ -25773,7 +25773,7 @@ components:
           host: host
           name: name
           comment: comment
-          use-node-proxy: 0
+          use-node-proxy: false
         changes: "{}"
       properties:
         data:
@@ -25804,7 +25804,7 @@ components:
         fingerprint: fingerprint
         host: host
         comment: comment
-        use-node-proxy: 0
+        use-node-proxy: false
         delete:
         - comment
         - comment
@@ -25860,7 +25860,7 @@ components:
           format: int64
           type: integer
         use-node-proxy:
-          default: 0
+          default: false
           description: Use the http proxy configuration of the node for remote connections.
           type: boolean
     ConfigRemoteUpdateRemoteResponse:
@@ -26006,7 +26006,7 @@ components:
           burst-out: burst-out
           id: id
           rate-out: rate-out
-          path-style: 0
+          path-style: false
           region: region
         - put-rate-limit: 6
           access-key: access-key
@@ -26021,7 +26021,7 @@ components:
           burst-out: burst-out
           id: id
           rate-out: rate-out
-          path-style: 0
+          path-style: false
           region: region
         changes: "{}"
       properties:
@@ -26055,7 +26055,7 @@ components:
         burst-out: burst-out
         id: id
         rate-out: rate-out
-        path-style: 0
+        path-style: false
         region: region
       properties:
         access-key:
@@ -26098,7 +26098,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         path-style:
-          default: 0
+          default: false
           description: Use path style bucket addressing over vhost style.
           type: boolean
         port:
@@ -26188,7 +26188,7 @@ components:
           burst-out: burst-out
           id: id
           rate-out: rate-out
-          path-style: 0
+          path-style: false
           region: region
         changes: "{}"
       properties:
@@ -26235,7 +26235,7 @@ components:
         fingerprint: fingerprint
         burst-out: burst-out
         rate-out: rate-out
-        path-style: 0
+        path-style: false
         region: region
       properties:
         access-key:
@@ -26282,7 +26282,7 @@ components:
           pattern: "/^(?:[0-9a-fA-F][0-9a-fA-F])(?::[0-9a-fA-F][0-9a-fA-F]){31}$/"
           type: string
         path-style:
-          default: 0
+          default: false
           description: Use path style bucket addressing over vhost style.
           type: boolean
         port:
@@ -26364,7 +26364,7 @@ components:
           id: id
           owner: owner
           remote-store: remote-store
-          remove-vanished: 0
+          remove-vanished: false
           run-on-mount: true
           resync-corrupt: true
           store: store
@@ -26394,7 +26394,7 @@ components:
           id: id
           owner: owner
           remote-store: remote-store
-          remove-vanished: 0
+          remove-vanished: false
           run-on-mount: true
           resync-corrupt: true
           store: store
@@ -26442,7 +26442,7 @@ components:
         id: id
         owner: owner
         remote-store: remote-store
-        remove-vanished: 0
+        remove-vanished: false
         run-on-mount: true
         resync-corrupt: true
         store: store
@@ -26561,7 +26561,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -26655,7 +26655,7 @@ components:
           id: id
           owner: owner
           remote-store: remote-store
-          remove-vanished: 0
+          remove-vanished: false
           run-on-mount: true
           resync-corrupt: true
           store: store
@@ -26729,7 +26729,7 @@ components:
         digest: digest
         owner: owner
         remote-store: remote-store
-        remove-vanished: 0
+        remove-vanished: false
         run-on-mount: true
         resync-corrupt: true
         store: store
@@ -26852,7 +26852,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -27405,7 +27405,7 @@ components:
         password: password
         hint: hint
         digest: digest
-        force: 0
+        force: false
         kdf: ""
         new-password: new-password
       properties:
@@ -27415,7 +27415,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         force:
-          default: 0
+          default: false
           description: "Reset the passphrase for a tape key, using the root-only accessible\
             \ copy."
           type: boolean
@@ -27781,7 +27781,7 @@ components:
         - max-depth: 0
           schedule: schedule
           verify-threads: 19
-          ignore-verified: 1
+          ignore-verified: true
           ns: ns
           read-threads: 5
           outdated-after: 0
@@ -27791,7 +27791,7 @@ components:
         - max-depth: 0
           schedule: schedule
           verify-threads: 19
-          ignore-verified: 1
+          ignore-verified: true
           ns: ns
           read-threads: 5
           outdated-after: 0
@@ -27819,7 +27819,7 @@ components:
         max-depth: 0
         schedule: schedule
         verify-threads: 19
-        ignore-verified: 1
+        ignore-verified: true
         ns: ns
         read-threads: 5
         outdated-after: 0
@@ -27839,7 +27839,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         ignore-verified:
-          default: 1
+          default: true
           description: Do not verify backups that are already verified if their verification
             is not outdated.
           type: boolean
@@ -27926,7 +27926,7 @@ components:
           max-depth: 0
           schedule: schedule
           verify-threads: 19
-          ignore-verified: 1
+          ignore-verified: true
           ns: ns
           read-threads: 5
           outdated-after: 0
@@ -27963,7 +27963,7 @@ components:
         max-depth: 0
         schedule: schedule
         verify-threads: 19
-        ignore-verified: 1
+        ignore-verified: true
         ns: ns
         digest: digest
         read-threads: 5
@@ -27990,7 +27990,7 @@ components:
           pattern: "/^[a-f0-9]{64}$/"
           type: string
         ignore-verified:
-          default: 1
+          default: true
           description: Do not verify backups that are already verified if their verification
             is not outdated.
           type: boolean
@@ -28405,17 +28405,17 @@ components:
     NodesAptCreateUpdateRequest:
       additionalProperties: false
       example:
-        quiet: 0
-        notify: 0
+        quiet: false
+        notify: false
       properties:
         notify:
-          default: 0
+          default: false
           description: |-
             Send notification mail about new package updates available to the email
             address configured for 'root@pam').
           type: boolean
         quiet:
-          default: 0
+          default: false
           description: "Only produces output suitable for logging, omitting progress\
             \ indicators."
           type: boolean
@@ -28513,10 +28513,10 @@ components:
     NodesCertificatesCreateCertificateRequest:
       additionalProperties: false
       example:
-        force: 0
+        force: false
       properties:
         force:
-          default: 0
+          default: false
           description: Force replacement of existing files.
           type: boolean
     NodesCertificatesCreateCertificateResponse:
@@ -28571,22 +28571,22 @@ components:
       additionalProperties: false
       example:
         certificates: certificates
-        restart: 0
-        force: 0
+        restart: false
+        force: false
         key: key
       properties:
         certificates:
           description: PEM encoded certificate (chain).
           type: string
         force:
-          default: 0
+          default: false
           description: Force replacement of existing files.
           type: boolean
         key:
           description: PEM encoded private key.
           type: string
         restart:
-          default: 0
+          default: false
           description: "UI compatibility parameter, ignored"
           type: boolean
       required:
@@ -28957,14 +28957,14 @@ components:
     NodesDisksCreateDirectoryRequest:
       additionalProperties: false
       example:
-        add-datastore: 0
+        add-datastore: false
         disk: disk
         name: name
         filesystem: ""
-        removable-datastore: 0
+        removable-datastore: false
       properties:
         add-datastore:
-          default: 0
+          default: false
           description: Configure a datastore using the directory.
           type: boolean
         disk:
@@ -28984,7 +28984,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         removable-datastore:
-          default: 0
+          default: false
           description: The added datastore is removable.
           type: boolean
       required:
@@ -30408,10 +30408,10 @@ components:
     NodesSubscriptionCreateSubscriptionRequest:
       additionalProperties: false
       example:
-        force: 0
+        force: false
       properties:
         force:
-          default: 0
+          default: false
           description: "Always connect to server, even if information in cache is\
             \ up to date."
           type: boolean
@@ -30730,7 +30730,7 @@ components:
         remote-store: remote-store
         max-depth: 0
         ns: ns
-        remove-vanished: 0
+        remove-vanished: false
         transfer-last: 1
         resync-corrupt: true
         store: store
@@ -30823,7 +30823,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -30876,7 +30876,7 @@ components:
         remote-store: remote-store
         max-depth: 0
         ns: ns
-        remove-vanished: 0
+        remove-vanished: false
         transfer-last: 1
         store: store
         verified-only: true
@@ -30964,7 +30964,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -31291,7 +31291,7 @@ components:
         - group-filter
         worker-threads: 19
         drive: drive
-        force-media-set: 0
+        force-media-set: false
       properties:
         drive:
           description: Drive Identifier.
@@ -31306,7 +31306,7 @@ components:
           description: Export media set upon job completion.
           type: boolean
         force-media-set:
-          default: 0
+          default: false
           description: Ignore the allocation policy and start a new media-set.
           type: boolean
         group-filter:
@@ -31414,14 +31414,14 @@ components:
           vendor: vendor
           name: name
           model: model
-          eject-before-unload: 0
+          eject-before-unload: false
           export-slots: ""
         - path: path
           serial: serial
           vendor: vendor
           name: name
           model: model
-          eject-before-unload: 0
+          eject-before-unload: false
           export-slots: ""
         changes: "{}"
       properties:
@@ -31764,11 +31764,11 @@ components:
     TapeDriveCreateFormatMediaRequest:
       additionalProperties: false
       example:
-        fast: 1
+        fast: true
         label-text: label-text
       properties:
         fast:
-          default: 1
+          default: true
           description: Use fast erase.
           type: boolean
         label-text:
@@ -31823,15 +31823,15 @@ components:
     TapeDriveUpdateInventoryRequest:
       additionalProperties: false
       example:
-        catalog: 0
-        read-all-labels: 0
+        catalog: false
+        read-all-labels: false
       properties:
         catalog:
-          default: 0
+          default: false
           description: Restore the catalog from tape.
           type: boolean
         read-all-labels:
-          default: 0
+          default: false
           description: Load all tapes and try read labels (even if already inventoried)
           type: boolean
     TapeDriveUpdateInventoryResponse:
@@ -32604,7 +32604,7 @@ components:
       example:
         path: path
         roleid: ""
-        propagate: 1
+        propagate: true
         ugid: ugid
         ugid_type: ""
       properties:
@@ -32615,7 +32615,7 @@ components:
           pattern: "/^(?:/|(?:/(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*))+)$/"
           type: string
         propagate:
-          default: 1
+          default: true
           description: Allow to propagate (inherit) permissions.
           type: boolean
         roleid:
@@ -32642,7 +32642,7 @@ components:
       - ugid_type
     AccessDomainsGetDomainsResponse_data_inner:
       example:
-        default: 0
+        default: false
         comment: comment
         realm: realm
         type: ""
@@ -32653,7 +32653,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if it is the default realm
           type: boolean
         realm:
@@ -32845,7 +32845,7 @@ components:
     AccessUsersGetUsersResponse_data_inner_tokens_inner:
       example:
         tokenid: tokenid
-        enable: 1
+        enable: true
         expire: 0
         comment: comment
       properties:
@@ -32855,7 +32855,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -32878,19 +32878,19 @@ components:
     AccessUsersGetUsersResponse_data_inner:
       example:
         firstname: firstname
-        enable: 1
+        enable: true
         expire: 0
         comment: comment
         tokens:
         - tokenid: tokenid
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
         - tokenid: tokenid
-          enable: 1
+          enable: true
           expire: 0
           comment: comment
-        totp-locked: 0
+        totp-locked: false
         userid: userid
         email: email
         tfa-locked-until: 6
@@ -32908,7 +32908,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -32942,7 +32942,7 @@ components:
             $ref: "#/components/schemas/AccessUsersGetUsersResponse_data_inner_tokens_inner"
           type: array
         totp-locked:
-          default: 0
+          default: false
           description: True if the user is currently locked out of TOTP factors
           type: boolean
         userid:
@@ -32956,7 +32956,7 @@ components:
     AccessUsersGetAccessUsersByUseridResponse_data:
       example:
         firstname: firstname
-        enable: 1
+        enable: true
         expire: 0
         comment: comment
         userid: userid
@@ -32975,7 +32975,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -33009,7 +33009,7 @@ components:
     AccessUsersGetTokenResponse_data_inner:
       example:
         tokenid: tokenid
-        enable: 1
+        enable: true
         token-name: token-name
         expire: 0
         comment: comment
@@ -33020,7 +33020,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enable the account (default). You can set this to '0' to disable
             the account.
           type: boolean
@@ -33781,7 +33781,7 @@ components:
         keep-yearly: 1
         schedule: schedule
         keep-weekly: 1
-        disable: 0
+        disable: false
         comment: comment
         id: id
       properties:
@@ -33791,7 +33791,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         disable:
-          default: 0
+          default: false
           description: Disable this job.
           type: boolean
         id:
@@ -33886,7 +33886,7 @@ components:
         remote-store: remote-store
         last-run-endtime: 0
         next-run: 1
-        remove-vanished: 0
+        remove-vanished: false
         run-on-mount: true
         last-run-state: last-run-state
         resync-corrupt: true
@@ -34020,7 +34020,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -34172,7 +34172,7 @@ components:
       example:
         last-run-endtime: 0
         max-depth: 4
-        ignore-verified: 1
+        ignore-verified: true
         next-run: 1
         ns: ns
         read-threads: 18
@@ -34197,7 +34197,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         ignore-verified:
-          default: 1
+          default: true
           description: Do not verify backups that are already verified if their verification
             is not outdated.
           type: boolean
@@ -34268,12 +34268,12 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         user-classes: ""
         port: 5248
         capath: capath
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
         realm: realm
       properties:
@@ -34300,7 +34300,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         filter:
@@ -34346,7 +34346,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       required:
@@ -34362,12 +34362,12 @@ components:
         filter: filter
         mode: ""
         bind-dn: bind-dn
-        default: 0
+        default: false
         user-classes: ""
         port: 5248
         capath: capath
         sync-defaults-options: ""
-        verify: 0
+        verify: false
         comment: comment
         realm: realm
       properties:
@@ -34394,7 +34394,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         filter:
@@ -34444,7 +34444,7 @@ components:
             \ then user synchronization will consider all LDAP entities where ``objectClass:\
             \ person`` `or` ``objectClass: user``."
         verify:
-          default: 0
+          default: false
           description: Verify server certificate
           type: boolean
       required:
@@ -34455,8 +34455,8 @@ components:
     ConfigAccessGetOpenidResponse_data_inner:
       example:
         acr-values: ""
-        default: 0
-        autocreate: 0
+        default: false
+        autocreate: false
         issuer-url: issuer-url
         client-key: client-key
         comment: comment
@@ -34471,7 +34471,7 @@ components:
           - $ref: "#/components/schemas/PbsAcrValuesField"
           description: OpenID ACR List
         autocreate:
-          default: 0
+          default: false
           description: Automatically create users if they do not exist.
           type: boolean
         client-id:
@@ -34486,7 +34486,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         issuer-url:
@@ -34521,7 +34521,7 @@ components:
       - realm
     ConfigAccessGetPamResponse_data:
       example:
-        default: 0
+        default: false
         comment: comment
         realm: realm
         type: ""
@@ -34532,7 +34532,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         default:
-          default: 0
+          default: false
           description: True if you want this to be the default realm selected on login.
           type: boolean
         realm:
@@ -34774,11 +34774,11 @@ components:
       example:
         path: path
         name: name
-        eject-before-unload: 0
+        eject-before-unload: false
         export-slots: ""
       properties:
         eject-before-unload:
-          default: 0
+          default: false
           description: "if set to true, tapes are ejected manually before unloading"
           type: boolean
         export-slots:
@@ -35059,12 +35059,12 @@ components:
     ConfigMetricsGetInfluxdbHttpResponse_data_inner:
       example:
         bucket: proxmox
-        enable: 1
+        enable: true
         max-body-size: 0
         organization: proxmox
         name: name
         comment: comment
-        verify-tls: 1
+        verify-tls: true
         url: url
         token: token
       properties:
@@ -35080,7 +35080,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         max-body-size:
@@ -35145,7 +35145,7 @@ components:
             .){3}(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9])?[0-9]))|(?:[0-9a-fA-F]{1,4}):(?:[0-9a-fA-F]{1,4}))))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,5}(?:[0-9a-fA-F]{1,4}))?::)(?:[0-9a-fA-F]{1,4}))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4}):){0,6}(?:[0-9a-fA-F]{1,4}))?::))))(?:/[^\0\
             -\x1f\x7f]*)?$/"
         verify-tls:
-          default: 1
+          default: true
           description: "If true, the certificate will be validated."
           type: boolean
       required:
@@ -35153,7 +35153,7 @@ components:
       - url
     ConfigMetricsGetInfluxdbUdpResponse_data_inner:
       example:
-        enable: 1
+        enable: true
         host: host
         name: name
         comment: comment
@@ -35165,7 +35165,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         enable:
-          default: 1
+          default: true
           description: Enables or disables the metrics server
           type: boolean
         host:
@@ -35666,7 +35666,7 @@ components:
         keep-yearly: 1
         schedule: schedule
         keep-weekly: 1
-        disable: 0
+        disable: false
         comment: comment
         id: id
       properties:
@@ -35676,7 +35676,7 @@ components:
           pattern: "/^[[:^cntrl:]]*$/"
           type: string
         disable:
-          default: 0
+          default: false
           description: Disable this job.
           type: boolean
         id:
@@ -35750,7 +35750,7 @@ components:
         host: host
         name: name
         comment: comment
-        use-node-proxy: 0
+        use-node-proxy: false
       properties:
         auth-id:
           description: Authentication ID
@@ -35793,7 +35793,7 @@ components:
           format: int64
           type: integer
         use-node-proxy:
-          default: 0
+          default: false
           description: Use the http proxy configuration of the node for remote connections.
           type: boolean
       required:
@@ -35815,7 +35815,7 @@ components:
         burst-out: burst-out
         id: id
         rate-out: rate-out
-        path-style: 0
+        path-style: false
         region: region
       properties:
         access-key:
@@ -35858,7 +35858,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         path-style:
-          default: 0
+          default: false
           description: Use path style bucket addressing over vhost style.
           type: boolean
         port:
@@ -35907,7 +35907,7 @@ components:
         id: id
         owner: owner
         remote-store: remote-store
-        remove-vanished: 0
+        remove-vanished: false
         run-on-mount: true
         resync-corrupt: true
         store: store
@@ -36026,7 +36026,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         remove-vanished:
-          default: 0
+          default: false
           description: Delete vanished backups. This remove the local copy if the
             remote backup was deleted.
           type: boolean
@@ -36309,7 +36309,7 @@ components:
         max-depth: 0
         schedule: schedule
         verify-threads: 19
-        ignore-verified: 1
+        ignore-verified: true
         ns: ns
         read-threads: 5
         outdated-after: 0
@@ -36329,7 +36329,7 @@ components:
           pattern: "/^(?:[A-Za-z0-9_][A-Za-z0-9._\\-]*)$/"
           type: string
         ignore-verified:
-          default: 1
+          default: true
           description: Do not verify backups that are already verified if their verification
             is not outdated.
           type: boolean
@@ -38251,11 +38251,11 @@ components:
         vendor: vendor
         name: name
         model: model
-        eject-before-unload: 0
+        eject-before-unload: false
         export-slots: ""
       properties:
         eject-before-unload:
-          default: 0
+          default: false
           description: "if set to true, tapes are ejected manually before unloading"
           type: boolean
         export-slots:

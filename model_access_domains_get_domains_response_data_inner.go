@@ -44,7 +44,7 @@ type _AccessDomainsGetDomainsResponseDataInner AccessDomainsGetDomainsResponseDa
 // will change when the set of required properties is changed
 func NewAccessDomainsGetDomainsResponseDataInner(realm string, type_ PbsTypeEnum) *AccessDomainsGetDomainsResponseDataInner {
 	this := AccessDomainsGetDomainsResponseDataInner{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	this.Realm = realm
 	this.Type = type_
@@ -58,7 +58,7 @@ func NewAccessDomainsGetDomainsResponseDataInnerWithDefaults() *AccessDomainsGet
 	this := AccessDomainsGetDomainsResponseDataInner{}
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 

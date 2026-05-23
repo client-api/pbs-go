@@ -44,7 +44,7 @@ type _ConfigChangerGetChangerResponseDataInner ConfigChangerGetChangerResponseDa
 // will change when the set of required properties is changed
 func NewConfigChangerGetChangerResponseDataInner(name string, path string) *ConfigChangerGetChangerResponseDataInner {
 	this := ConfigChangerGetChangerResponseDataInner{}
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 	this.Name = name
 	this.Path = path
@@ -57,7 +57,7 @@ func NewConfigChangerGetChangerResponseDataInner(name string, path string) *Conf
 func NewConfigChangerGetChangerResponseDataInnerWithDefaults() *ConfigChangerGetChangerResponseDataInner {
 	this := ConfigChangerGetChangerResponseDataInner{}
 
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 
 

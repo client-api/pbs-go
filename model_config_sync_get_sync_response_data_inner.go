@@ -112,7 +112,7 @@ func NewConfigSyncGetSyncResponseDataInner(id string, remoteStore string, store 
 	this := ConfigSyncGetSyncResponseDataInner{}
 	this.Id = id
 	this.RemoteStore = remoteStore
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 	this.Store = store
 	var syncDirection PbsAdminSyncSyncDirectionEnum = PBSADMINSYNCSYNCDIRECTIONENUM_PULL
@@ -144,7 +144,7 @@ func NewConfigSyncGetSyncResponseDataInnerWithDefaults() *ConfigSyncGetSyncRespo
 
 
 
-	var removeVanished bool = 0
+	var removeVanished bool = false
 	this.RemoveVanished = &removeVanished
 
 

@@ -71,7 +71,7 @@ type _ConfigPruneCreatePruneRequest ConfigPruneCreatePruneRequest
 // will change when the set of required properties is changed
 func NewConfigPruneCreatePruneRequest(id string, schedule string, store string) *ConfigPruneCreatePruneRequest {
 	this := ConfigPruneCreatePruneRequest{}
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	this.Id = id
 	this.Schedule = schedule
@@ -86,7 +86,7 @@ func NewConfigPruneCreatePruneRequestWithDefaults() *ConfigPruneCreatePruneReque
 	this := ConfigPruneCreatePruneRequest{}
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 

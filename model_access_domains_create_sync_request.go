@@ -37,7 +37,7 @@ type AccessDomainsCreateSyncRequest struct {
 // will change when the set of required properties is changed
 func NewAccessDomainsCreateSyncRequest() *AccessDomainsCreateSyncRequest {
 	this := AccessDomainsCreateSyncRequest{}
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
 	return &this
 }
@@ -48,7 +48,7 @@ func NewAccessDomainsCreateSyncRequest() *AccessDomainsCreateSyncRequest {
 func NewAccessDomainsCreateSyncRequestWithDefaults() *AccessDomainsCreateSyncRequest {
 	this := AccessDomainsCreateSyncRequest{}
 
-	var dryRun bool = 0
+	var dryRun bool = false
 	this.DryRun = &dryRun
 
 

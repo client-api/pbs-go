@@ -60,13 +60,13 @@ func NewConfigMetricsUpdateInfluxdbHttpRequest() *ConfigMetricsUpdateInfluxdbHtt
 	this := ConfigMetricsUpdateInfluxdbHttpRequest{}
 	var bucket string = "proxmox"
 	this.Bucket = &bucket
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var maxBodySize int64 = 25000000
 	this.MaxBodySize = &maxBodySize
 	var organization string = "proxmox"
 	this.Organization = &organization
-	var verifyTls bool = 1
+	var verifyTls bool = true
 	this.VerifyTls = &verifyTls
 	return &this
 }
@@ -83,7 +83,7 @@ func NewConfigMetricsUpdateInfluxdbHttpRequestWithDefaults() *ConfigMetricsUpdat
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var maxBodySize int64 = 25000000
@@ -94,7 +94,7 @@ func NewConfigMetricsUpdateInfluxdbHttpRequestWithDefaults() *ConfigMetricsUpdat
 
 
 
-	var verifyTls bool = 1
+	var verifyTls bool = true
 	this.VerifyTls = &verifyTls
 
 	return &this

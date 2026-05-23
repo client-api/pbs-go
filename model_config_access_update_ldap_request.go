@@ -82,11 +82,11 @@ type ConfigAccessUpdateLdapRequest struct {
 // will change when the set of required properties is changed
 func NewConfigAccessUpdateLdapRequest() *ConfigAccessUpdateLdapRequest {
 	this := ConfigAccessUpdateLdapRequest{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	var mode PbsModeEnum = PBSMODEENUM_LDAP
 	this.Mode = &mode
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 	return &this
 }
@@ -101,7 +101,7 @@ func NewConfigAccessUpdateLdapRequestWithDefaults() *ConfigAccessUpdateLdapReque
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 
@@ -118,7 +118,7 @@ func NewConfigAccessUpdateLdapRequestWithDefaults() *ConfigAccessUpdateLdapReque
 
 
 
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 
 	return &this

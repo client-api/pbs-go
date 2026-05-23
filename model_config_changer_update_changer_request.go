@@ -43,7 +43,7 @@ type ConfigChangerUpdateChangerRequest struct {
 // will change when the set of required properties is changed
 func NewConfigChangerUpdateChangerRequest() *ConfigChangerUpdateChangerRequest {
 	this := ConfigChangerUpdateChangerRequest{}
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 	return &this
 }
@@ -56,7 +56,7 @@ func NewConfigChangerUpdateChangerRequestWithDefaults() *ConfigChangerUpdateChan
 
 
 
-	var ejectBeforeUnload bool = 0
+	var ejectBeforeUnload bool = false
 	this.EjectBeforeUnload = &ejectBeforeUnload
 
 

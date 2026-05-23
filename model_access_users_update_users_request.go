@@ -55,7 +55,7 @@ type AccessUsersUpdateUsersRequest struct {
 // will change when the set of required properties is changed
 func NewAccessUsersUpdateUsersRequest() *AccessUsersUpdateUsersRequest {
 	this := AccessUsersUpdateUsersRequest{}
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 	var expire int64 = 0
 	this.Expire = &expire
@@ -72,7 +72,7 @@ func NewAccessUsersUpdateUsersRequestWithDefaults() *AccessUsersUpdateUsersReque
 
 
 
-	var enable bool = 1
+	var enable bool = true
 	this.Enable = &enable
 
 	var expire int64 = 0

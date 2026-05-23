@@ -55,7 +55,7 @@ type AdminDatastoreCreateVerifyRequest struct {
 // will change when the set of required properties is changed
 func NewAdminDatastoreCreateVerifyRequest() *AdminDatastoreCreateVerifyRequest {
 	this := AdminDatastoreCreateVerifyRequest{}
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 	var maxDepth int32 = 7
 	this.MaxDepth = &maxDepth
@@ -75,7 +75,7 @@ func NewAdminDatastoreCreateVerifyRequestWithDefaults() *AdminDatastoreCreateVer
 
 
 
-	var ignoreVerified bool = 1
+	var ignoreVerified bool = true
 	this.IgnoreVerified = &ignoreVerified
 
 	var maxDepth int32 = 7

@@ -80,13 +80,13 @@ type _ConfigAccessCreateAdRequest ConfigAccessCreateAdRequest
 // will change when the set of required properties is changed
 func NewConfigAccessCreateAdRequest(realm string, server1 string) *ConfigAccessCreateAdRequest {
 	this := ConfigAccessCreateAdRequest{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	var mode PbsModeEnum = PBSMODEENUM_LDAP
 	this.Mode = &mode
 	this.Realm = realm
 	this.Server1 = server1
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 	return &this
 }
@@ -101,7 +101,7 @@ func NewConfigAccessCreateAdRequestWithDefaults() *ConfigAccessCreateAdRequest {
 
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 
@@ -116,7 +116,7 @@ func NewConfigAccessCreateAdRequestWithDefaults() *ConfigAccessCreateAdRequest {
 
 
 
-	var verify bool = 0
+	var verify bool = false
 	this.Verify = &verify
 
 	return &this

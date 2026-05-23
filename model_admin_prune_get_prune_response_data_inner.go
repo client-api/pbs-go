@@ -83,7 +83,7 @@ type _AdminPruneGetPruneResponseDataInner AdminPruneGetPruneResponseDataInner
 // will change when the set of required properties is changed
 func NewAdminPruneGetPruneResponseDataInner(id string, schedule string, store string) *AdminPruneGetPruneResponseDataInner {
 	this := AdminPruneGetPruneResponseDataInner{}
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	this.Id = id
 	this.Schedule = schedule
@@ -98,7 +98,7 @@ func NewAdminPruneGetPruneResponseDataInnerWithDefaults() *AdminPruneGetPruneRes
 	this := AdminPruneGetPruneResponseDataInner{}
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 

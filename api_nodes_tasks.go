@@ -329,7 +329,7 @@ func (a *NodesTasksAPIService) NodesTasksGetLogExecute(r ApiNodesTasksGetLogRequ
 	if r.download != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "download", r.download, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "download", defaultValue, "form", "")
 		r.download = &defaultValue
 	}
@@ -1059,7 +1059,7 @@ func (a *NodesTasksAPIService) NodesTasksGetTasksExecute(r ApiNodesTasksGetTasks
 	if r.errors != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "errors", r.errors, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "errors", defaultValue, "form", "")
 		r.errors = &defaultValue
 	}
@@ -1073,7 +1073,7 @@ func (a *NodesTasksAPIService) NodesTasksGetTasksExecute(r ApiNodesTasksGetTasks
 	if r.running != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "running", r.running, "form", "")
 	} else {
-		var defaultValue bool = 0
+		var defaultValue bool = false
 		parameterAddToHeaderOrQuery(localVarQueryParams, "running", defaultValue, "form", "")
 		r.running = &defaultValue
 	}

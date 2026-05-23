@@ -52,7 +52,7 @@ func NewConfigAcmeCreatePluginsRequest(api string, data string, id string, type_
 	this := ConfigAcmeCreatePluginsRequest{}
 	this.Api = api
 	this.Data = data
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	this.Id = id
 	this.Type = type_
@@ -69,7 +69,7 @@ func NewConfigAcmeCreatePluginsRequestWithDefaults() *ConfigAcmeCreatePluginsReq
 
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 

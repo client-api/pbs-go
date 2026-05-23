@@ -34,7 +34,7 @@ type TapeDriveCreateFormatMediaRequest struct {
 // will change when the set of required properties is changed
 func NewTapeDriveCreateFormatMediaRequest() *TapeDriveCreateFormatMediaRequest {
 	this := TapeDriveCreateFormatMediaRequest{}
-	var fast bool = 1
+	var fast bool = true
 	this.Fast = &fast
 	return &this
 }
@@ -45,7 +45,7 @@ func NewTapeDriveCreateFormatMediaRequest() *TapeDriveCreateFormatMediaRequest {
 func NewTapeDriveCreateFormatMediaRequestWithDefaults() *TapeDriveCreateFormatMediaRequest {
 	this := TapeDriveCreateFormatMediaRequest{}
 
-	var fast bool = 1
+	var fast bool = true
 	this.Fast = &fast
 
 

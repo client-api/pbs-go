@@ -40,7 +40,7 @@ type ConfigAccessUpdatePamRequest struct {
 // will change when the set of required properties is changed
 func NewConfigAccessUpdatePamRequest() *ConfigAccessUpdatePamRequest {
 	this := ConfigAccessUpdatePamRequest{}
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 	return &this
 }
@@ -52,7 +52,7 @@ func NewConfigAccessUpdatePamRequestWithDefaults() *ConfigAccessUpdatePamRequest
 	this := ConfigAccessUpdatePamRequest{}
 
 
-	var default_ bool = 0
+	var default_ bool = false
 	this.Default = &default_
 
 

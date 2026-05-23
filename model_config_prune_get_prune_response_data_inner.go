@@ -71,7 +71,7 @@ type _ConfigPruneGetPruneResponseDataInner ConfigPruneGetPruneResponseDataInner
 // will change when the set of required properties is changed
 func NewConfigPruneGetPruneResponseDataInner(id string, schedule string, store string) *ConfigPruneGetPruneResponseDataInner {
 	this := ConfigPruneGetPruneResponseDataInner{}
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 	this.Id = id
 	this.Schedule = schedule
@@ -86,7 +86,7 @@ func NewConfigPruneGetPruneResponseDataInnerWithDefaults() *ConfigPruneGetPruneR
 	this := ConfigPruneGetPruneResponseDataInner{}
 
 
-	var disable bool = 0
+	var disable bool = false
 	this.Disable = &disable
 
 
