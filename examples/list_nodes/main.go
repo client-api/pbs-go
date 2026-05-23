@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"os"
 
-	pbs "github.com//"
+	pbs "github.com/client-api/pbs-go"
 )
 
 func main() {
