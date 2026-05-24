@@ -31,7 +31,7 @@ import (
 func main() {
     cfg := openapi.NewConfiguration()
     cfg.Servers[0].URL = "https://pbs1.example.com:8007/api2/json"
-    cfg.AddDefaultHeader("Authorization", "PBSAPIToken=user@realm!tokenid=uuid-secret")
+    cfg.AddDefaultHeader("Authorization", "PBSAPIToken=user@realm!tokenid:uuid-secret")
 
     pve := openapi.NewPbs(cfg)
 

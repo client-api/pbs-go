@@ -38982,7 +38982,7 @@ components:
       name: CSRFPreventionToken
       type: apiKey
     PBSApiToken:
-      description: "Format: PBSAPIToken=USER@REALM!TOKENID=UUID"
+      description: "Format: PBSAPIToken=USER@REALM!TOKENID:UUID"
       in: header
       name: Authorization
       type: apiKey
