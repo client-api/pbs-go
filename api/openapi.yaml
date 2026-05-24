@@ -1686,6 +1686,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup types.
         explode: true
@@ -1815,6 +1816,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup type.
         explode: true
@@ -1899,6 +1901,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup type.
         explode: true
@@ -1983,6 +1986,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup types.
         explode: true
@@ -2672,6 +2676,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup types.
         explode: true
@@ -2792,6 +2797,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup types.
         explode: true
@@ -3013,6 +3019,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup type.
         explode: true
@@ -3197,6 +3204,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup types.
         explode: true
@@ -4154,6 +4162,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup type.
         explode: true
@@ -12264,6 +12273,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - $ref: "#/components/parameters/PbsNodesAptNode"
       - description: Display all log since this UNIX epoch. Conflicts with 'startcursor'.
@@ -12275,6 +12285,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - description: Start after the given Cursor. Conflicts with 'since'.
         explode: true
@@ -12293,6 +12304,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       responses:
         "200":
@@ -13248,6 +13260,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - $ref: "#/components/parameters/PbsNodesAptNode"
       - description: Service ID.
@@ -13277,6 +13290,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - description: Display all log until this date-time string.
         explode: true
@@ -13345,6 +13359,7 @@ paths:
           default: 50
           format: int64
           type: integer
+          x-int64: true
         style: form
       - $ref: "#/components/parameters/PbsNodesAptNode"
       - description: Only list running tasks.
@@ -13364,6 +13379,7 @@ paths:
         schema:
           format: int64
           type: integer
+          x-int64: true
         style: form
       - description: List tasks beginning from this offset.
         explode: true
@@ -13374,6 +13390,7 @@ paths:
           default: 0
           format: int64
           type: integer
+          x-int64: true
         style: form
       - description: Only list tasks which have any one of the listed status.
         explode: true
@@ -13412,6 +13429,7 @@ paths:
         schema:
           format: int64
           type: integer
+          x-int64: true
         style: form
       - description: Only list tasks from this user.
         explode: true
@@ -13547,6 +13565,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - $ref: "#/components/parameters/PbsNodesAptNode"
       - description: Start at this line when reading the tasklog
@@ -13559,6 +13578,7 @@ paths:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         style: form
       - description: "Test task status, and set result attribute \"active\" accordingly."
         explode: true
@@ -13788,6 +13808,7 @@ paths:
         schema:
           format: int64
           type: integer
+          x-int64: true
         style: form
       - description: Terminal ticket
         explode: true
@@ -14012,6 +14033,7 @@ paths:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         style: form
       - description: Backup type.
         explode: true
@@ -14303,6 +14325,7 @@ paths:
           default: 0
           format: int64
           type: integer
+          x-int64: true
         style: form
       responses:
         "200":
@@ -17445,6 +17468,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         firstname:
           description: First name.
           maxLength: 64
@@ -17582,6 +17606,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         firstname:
           description: First name.
           maxLength: 64
@@ -17713,6 +17738,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
     AccessUsersCreateTokenResponse:
       example:
         total: 0
@@ -17775,6 +17801,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         regenerate:
           default: false
           description: Regenerate token secret while keeping permissions.
@@ -18547,6 +18574,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -18615,6 +18643,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -18681,31 +18710,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         ns:
           description: Namespace.
           maxLength: 256
@@ -18768,31 +18803,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         max-depth:
           description: "How many levels of namespaces should be operated on (0 ==\
             \ no recursion, empty == automatic full recursion, namespace depths reduce\
@@ -19054,6 +19095,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -19106,6 +19148,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -19133,6 +19176,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         read-threads:
           default: 1
           description: The number of threads to use for reading chunks in verify job.
@@ -19858,6 +19902,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         csum:
           description: Digest list checksum.
           type: string
@@ -19866,6 +19911,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         wid:
           description: Dynamic writer ID.
           maximum: 256
@@ -19942,6 +19988,7 @@ components:
             format: int64
             minimum: 0
             type: integer
+            x-int64: true
           type: array
         wid:
           description: Dynamic writer ID.
@@ -20046,6 +20093,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         csum:
           description: Digest list checksum.
           type: string
@@ -20055,6 +20103,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         wid:
           description: Fixed writer ID.
           maximum: 256
@@ -20101,6 +20150,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
       required:
       - archive-name
     BackupUpgradeCreateFixedIndexResponse:
@@ -20142,6 +20192,7 @@ components:
             format: int64
             minimum: 0
             type: integer
+            x-int64: true
           type: array
         wid:
           description: Fixed writer ID.
@@ -22012,6 +22063,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         type: {}
       required:
       - description
@@ -22338,31 +22390,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         maintenance-mode:
           allOf:
           - $ref: "#/components/schemas/PbsMaintenanceField"
@@ -22581,31 +22639,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         maintenance-mode:
           allOf:
           - $ref: "#/components/schemas/PbsMaintenanceField"
@@ -23223,6 +23287,7 @@ components:
           description: The (optional) maximum body size
           format: int64
           type: integer
+          x-int64: true
         name:
           description: Metrics Server ID.
           maxLength: 32
@@ -23400,6 +23465,7 @@ components:
           description: The (optional) maximum body size
           format: int64
           type: integer
+          x-int64: true
         organization:
           default: proxmox
           description: InfluxDB Organization.
@@ -23536,6 +23602,7 @@ components:
           description: The MTU
           format: int64
           type: integer
+          x-int64: true
         name:
           description: Metrics Server ID.
           maxLength: 32
@@ -23655,6 +23722,7 @@ components:
           description: The MTU
           format: int64
           type: integer
+          x-int64: true
     ConfigMetricsUpdateInfluxdbUdpResponse:
       example:
         total: 0
@@ -25396,31 +25464,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         max-depth:
           description: "How many levels of namespaces should be operated on (0 ==\
             \ no recursion, empty == automatic full recursion, namespace depths reduce\
@@ -25567,31 +25641,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         max-depth:
           description: "How many levels of namespaces should be operated on (0 ==\
             \ no recursion, empty == automatic full recursion, namespace depths reduce\
@@ -25722,6 +25802,7 @@ components:
           description: The (optional) port
           format: int64
           type: integer
+          x-int64: true
         use-node-proxy:
           default: false
           description: Use the http proxy configuration of the node for remote connections.
@@ -25859,6 +25940,7 @@ components:
           description: The (optional) port
           format: int64
           type: integer
+          x-int64: true
         use-node-proxy:
           default: false
           description: Use the http proxy configuration of the node for remote connections.
@@ -26105,6 +26187,7 @@ components:
           description: Port to access S3 object store.
           format: int64
           type: integer
+          x-int64: true
         provider-quirks:
           description: List of provider specific feature implementation quirks.
           items:
@@ -26114,6 +26197,7 @@ components:
           description: "Rate limit for put requests given as #request/s."
           format: int64
           type: integer
+          x-int64: true
         rate-in:
           description: "Byte size with optional unit (B, KB (base 10), MB, GB, ...,\
             \ KiB (base 2), MiB, Gib, ...)."
@@ -26289,6 +26373,7 @@ components:
           description: Port to access S3 object store.
           format: int64
           type: integer
+          x-int64: true
         provider-quirks:
           description: List of provider specific feature implementation quirks.
           items:
@@ -26298,6 +26383,7 @@ components:
           description: "Rate limit for put requests given as #request/s."
           format: int64
           type: integer
+          x-int64: true
         rate-in:
           description: "Byte size with optional unit (B, KB (base 10), MB, GB, ...,\
             \ KiB (base 2), MiB, Gib, ...)."
@@ -26592,6 +26678,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         unmount-on-done:
           description: Unmount involved removable datastore after the sync job finishes.
             Requires 'run-on-mount' to be enabled.
@@ -26883,6 +26970,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         unmount-on-done:
           description: Unmount involved removable datastore after the sync job finishes.
             Requires 'run-on-mount' to be enabled.
@@ -27861,6 +27949,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         read-threads:
           default: 1
           description: The number of threads to use for reading chunks in verify job.
@@ -28012,6 +28101,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         read-threads:
           default: 1
           description: The number of threads to use for reading chunks in verify job.
@@ -28299,6 +28389,7 @@ components:
           description: Index within the file (starting from 0).
           format: int64
           type: integer
+          x-int64: true
         path:
           description: Path to the containing file.
           type: string
@@ -28884,6 +28975,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
     NodesConfigUpdateConfigResponse:
       example:
         total: 0
@@ -29820,6 +29912,7 @@ components:
           description: VLAN ID.
           format: int64
           type: integer
+          x-int64: true
         vlan-raw-device:
           description: Network interface name.
           maxLength: 15
@@ -30080,6 +30173,7 @@ components:
           description: VLAN ID.
           format: int64
           type: integer
+          x-int64: true
         vlan-raw-device:
           description: Network interface name.
           maxLength: 15
@@ -30842,6 +30936,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         verified-only:
           description: "Only synchronize verified backup snapshots, exclude others."
           type: boolean
@@ -30979,6 +31074,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         verified-only:
           description: "Only synchronize verified backup snapshots, exclude others."
           type: boolean
@@ -31500,11 +31596,13 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         to:
           description: Destination slot number
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
       required:
       - from
       - to
@@ -31752,6 +31850,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         total:
           description: "Optional total count, present for paginated list responses."
           type: integer
@@ -31924,6 +32023,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
       required:
       - source-slot
     TapeDriveCreateLoadSlotResponse:
@@ -32073,6 +32173,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
     TapeDriveCreateUnloadResponse:
       example:
         total: 0
@@ -32734,6 +32835,7 @@ components:
           description: Creation time of this entry as unix epoch.
           format: int64
           type: integer
+          x-int64: true
         description:
           description: User chosen description for this entry.
           type: string
@@ -32780,6 +32882,7 @@ components:
             \ expiration time."
           format: int64
           type: integer
+          x-int64: true
         totp-locked:
           description: The user is locked out of TOTP authentication.
           type: boolean
@@ -32811,6 +32914,7 @@ components:
           items:
             format: int64
             type: integer
+            x-int64: true
           type: array
       required:
       - recovery
@@ -32866,6 +32970,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         tokenid:
           description: API Token ID
           maxLength: 64
@@ -32919,6 +33024,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         firstname:
           description: First name.
           maxLength: 64
@@ -32936,6 +33042,7 @@ components:
             factors
           format: int64
           type: integer
+          x-int64: true
         tokens:
           description: List of user's API tokens.
           items:
@@ -32986,6 +33093,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         firstname:
           description: First name.
           maxLength: 64
@@ -33031,6 +33139,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         token-name:
           description: |-
             The token ID part of an API token authentication id.
@@ -33129,6 +33238,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - filename
     AdminDatastoreGetGcResponse_data_cache_stats:
@@ -33142,11 +33252,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         misses:
           description: Number of atime update cache misses
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - hits
       - misses
@@ -33180,29 +33292,35 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         disk-chunks:
           description: Chunks used on disk.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         duration:
           description: Duration of last gc run
           format: int64
           type: integer
+          x-int64: true
         index-data-bytes:
           description: Sum of bytes referred by index files.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         index-file-count:
           description: Number of processed index files.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-run-endtime:
           description: Endtime of the last gc run
           format: int64
           type: integer
+          x-int64: true
         last-run-state:
           description: State of the last gc run
           type: string
@@ -33210,32 +33328,38 @@ components:
           description: Time of the next gc run
           format: int64
           type: integer
+          x-int64: true
         pending-bytes:
           description: Sum of pending bytes (pending removal - kept for safety).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         pending-chunks:
           description: Number of pending chunks (pending removal - kept for safety).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-bad:
           description: Number of chunks marked as .bad by verify that have been removed
             by GC.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-bytes:
           description: Sum of removed bytes.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-chunks:
           description: Number of removed chunks.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         schedule:
           description: Schedule of the gc job
           type: string
@@ -33244,6 +33368,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         store:
           description: Datastore
           type: string
@@ -33276,16 +33401,19 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-groups:
           description: Number of entities
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-snapshots:
           description: Number of entities
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - protected-snapshots
       - removed-groups
@@ -33306,6 +33434,7 @@ components:
           description: Number of contained snapshots
           format: int64
           type: integer
+          x-int64: true
         backup-id:
           description: Backup ID.
           pattern: "/^[A-Za-z0-9_][A-Za-z0-9._\\-]*$/"
@@ -33328,6 +33457,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         owner:
           description: Authentication ID
           maxLength: 64
@@ -33374,6 +33504,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -33431,6 +33562,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         backup-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackupTypeEnum"
@@ -33465,6 +33597,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         verification:
           $ref: "#/components/schemas/AdminDatastoreGetSnapshotsResponse_data_inner_verification"
       required:
@@ -33484,11 +33617,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         snapshots:
           description: The number of snapshots of the type.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - groups
       - snapshots
@@ -33541,52 +33676,62 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         disk-chunks:
           description: Chunks used on disk.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         index-data-bytes:
           description: Sum of bytes referred by index files.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         index-file-count:
           description: Number of processed index files.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         pending-bytes:
           description: Sum of pending bytes (pending removal - kept for safety).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         pending-chunks:
           description: Number of pending chunks (pending removal - kept for safety).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-bad:
           description: Number of chunks marked as .bad by verify that have been removed
             by GC.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-bytes:
           description: Sum of removed bytes.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         removed-chunks:
           description: Number of removed chunks.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         still-bad:
           description: Number of chunks still marked as .bad after garbage collection.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         upid:
           description: Unique Process/Task Identifier
           minLength: 36
@@ -33620,36 +33765,43 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         downloaded:
           description: Total downloaded (bytes).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         get:
           description: Get requests
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         head:
           description: Head requests
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         post:
           description: Post requests
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         put:
           description: Put requests
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         uploaded:
           description: Total uploaded (bytes).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - delete
       - downloaded
@@ -33706,6 +33858,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         backend-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackendTypeEnum"
@@ -33722,11 +33875,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           description: Used space (bytes).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - avail
       - backend-type
@@ -33805,35 +33960,42 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         last-run-endtime:
           description: Endtime of the last run.
           format: int64
           type: integer
+          x-int64: true
         last-run-state:
           description: Result of the last run.
           type: string
@@ -33851,6 +34013,7 @@ components:
           description: Estimated time of the next run (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         ns:
           description: Namespace.
           maxLength: 256
@@ -33958,6 +34121,7 @@ components:
           description: Endtime of the last run.
           format: int64
           type: integer
+          x-int64: true
         last-run-state:
           description: Result of the last run.
           type: string
@@ -33975,6 +34139,7 @@ components:
           description: Estimated time of the next run (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         ns:
           description: Namespace.
           maxLength: 256
@@ -34051,6 +34216,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         unmount-on-done:
           description: Unmount involved removable datastore after the sync job finishes.
             Requires 'run-on-mount' to be enabled.
@@ -34110,11 +34276,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         cur-rate-out:
           description: Current egress rate in bytes/second
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         name:
           description: Rule ID.
           maxLength: 32
@@ -34205,6 +34373,7 @@ components:
           description: Endtime of the last run.
           format: int64
           type: integer
+          x-int64: true
         last-run-state:
           description: Result of the last run.
           type: string
@@ -34222,6 +34391,7 @@ components:
           description: Estimated time of the next run (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         ns:
           description: Namespace.
           maxLength: 256
@@ -34233,6 +34403,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         read-threads:
           default: 1
           description: The number of threads to use for reading chunks in verify job.
@@ -34855,31 +35026,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         maintenance-mode:
           allOf:
           - $ref: "#/components/schemas/PbsMaintenanceField"
@@ -34982,10 +35159,12 @@ components:
           description: Timestamp when key was archived (not set if key is active).
           format: int64
           type: integer
+          x-int64: true
         created:
           description: Key creation time
           format: int64
           type: integer
+          x-int64: true
         fingerprint:
           description: X509 certificate fingerprint (sha256).
           pattern: "/^(?:[0-9a-fA-F][0-9a-fA-F])(?::[0-9a-fA-F][0-9a-fA-F]){31}$/"
@@ -35008,6 +35187,7 @@ components:
           description: Key modification time
           format: int64
           type: integer
+          x-int64: true
         path:
           description: Path to key (if stored in a file)
           type: string
@@ -35088,6 +35268,7 @@ components:
           description: The (optional) maximum body size
           format: int64
           type: integer
+          x-int64: true
         name:
           description: Metrics Server ID.
           maxLength: 32
@@ -35187,6 +35368,7 @@ components:
           description: The MTU
           format: int64
           type: integer
+          x-int64: true
         name:
           description: Metrics Server ID.
           maxLength: 32
@@ -35690,31 +35872,37 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-hourly:
           description: Number of hourly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-last:
           description: Number of backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-monthly:
           description: Number of monthly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-weekly:
           description: Number of weekly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         keep-yearly:
           description: Number of yearly backups to keep.
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         max-depth:
           description: "How many levels of namespaces should be operated on (0 ==\
             \ no recursion, empty == automatic full recursion, namespace depths reduce\
@@ -35792,6 +35980,7 @@ components:
           description: The (optional) port
           format: int64
           type: integer
+          x-int64: true
         use-node-proxy:
           default: false
           description: Use the http proxy configuration of the node for remote connections.
@@ -35865,6 +36054,7 @@ components:
           description: Port to access S3 object store.
           format: int64
           type: integer
+          x-int64: true
         provider-quirks:
           description: List of provider specific feature implementation quirks.
           items:
@@ -35874,6 +36064,7 @@ components:
           description: "Rate limit for put requests given as #request/s."
           format: int64
           type: integer
+          x-int64: true
         rate-in:
           description: "Byte size with optional unit (B, KB (base 10), MB, GB, ...,\
             \ KiB (base 2), MiB, Gib, ...)."
@@ -36057,6 +36248,7 @@ components:
           format: int64
           minimum: 1
           type: integer
+          x-int64: true
         unmount-on-done:
           description: Unmount involved removable datastore after the sync job finishes.
             Requires 'run-on-mount' to be enabled.
@@ -36195,6 +36387,7 @@ components:
           description: Key creation time
           format: int64
           type: integer
+          x-int64: true
         fingerprint:
           description: X509 certificate fingerprint (sha256).
           pattern: "/^(?:[0-9a-fA-F][0-9a-fA-F])(?::[0-9a-fA-F][0-9a-fA-F]){31}$/"
@@ -36211,6 +36404,7 @@ components:
           description: Key modification time
           format: int64
           type: integer
+          x-int64: true
         path:
           description: Path to key (if stored in a file)
           type: string
@@ -36351,6 +36545,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         read-threads:
           default: 1
           description: The number of threads to use for reading chunks in verify job.
@@ -36571,6 +36766,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         kind:
           description: Info kind (e.g. "warning")
           type: string
@@ -36860,10 +37056,12 @@ components:
           description: Certificate's notAfter timestamp (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         notbefore:
           description: Certificate's notBefore timestamp (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         pem:
           description: Certificate in PEM format.
           type: string
@@ -36969,6 +37167,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
     NodesDisksGetDirectoryResponse_data_inner:
       example:
         path: path
@@ -37038,6 +37237,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           allOf:
           - $ref: "#/components/schemas/PbsNodesDisksUsedEnum"
@@ -37109,6 +37309,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         serial:
           description: Serisal number
           type: string
@@ -37117,6 +37318,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         status:
           allOf:
           - $ref: "#/components/schemas/PbsStatusEnum"
@@ -37160,6 +37362,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         name:
           description: Attribute name
           type: string
@@ -37234,6 +37437,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         dedup:
           description: ZFS deduplication ratio
           type: number
@@ -37242,11 +37446,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         free:
           description: Free space
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         health:
           description: Health
           type: string
@@ -37258,6 +37464,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - alloc
       - dedup
@@ -37454,6 +37661,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         name:
           description: Network interface name.
           maxLength: 15
@@ -37486,6 +37694,7 @@ components:
           description: VLAN ID.
           format: int64
           type: integer
+          x-int64: true
         vlan-raw-device:
           description: Network interface name.
           maxLength: 15
@@ -37558,6 +37767,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         model:
           description: The CPU model
           type: string
@@ -37566,6 +37776,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - cpus
       - model
@@ -37617,16 +37828,19 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         total:
           description: Total memory
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           description: Used memory
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - free
       - total
@@ -37643,16 +37857,19 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         total:
           description: Total space (bytes).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           description: Used space (bytes).
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - avail
       - total
@@ -37669,16 +37886,19 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         total:
           description: Total swap
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           description: Used swap
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - free
       - total
@@ -37749,6 +37969,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         wait:
           description: Total IO wait since last query.
           type: number
@@ -37782,6 +38003,7 @@ components:
           description: timestamp of the last check done
           format: int64
           type: integer
+          x-int64: true
         key:
           description: "the subscription key, if set and permitted to access"
           type: string
@@ -37822,6 +38044,7 @@ components:
           description: Line number.
           format: int64
           type: integer
+          x-int64: true
         t:
           description: Line text.
           type: string
@@ -37845,6 +38068,7 @@ components:
           description: The task end time (Epoch)
           format: int64
           type: integer
+          x-int64: true
         node:
           description: The node name where the task is running on.
           type: string
@@ -37852,15 +38076,18 @@ components:
           description: The Unix PID
           format: int64
           type: integer
+          x-int64: true
         pstart:
           description: The task start time (Epoch)
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         starttime:
           description: The task start time (Epoch)
           format: int64
           type: integer
+          x-int64: true
         status:
           description: Task end status
           type: string
@@ -37915,14 +38142,17 @@ components:
           description: The Unix PID.
           format: int64
           type: integer
+          x-int64: true
         pstart:
           description: The Unix process start time from `/proc/pid/stat`
           format: int64
           type: integer
+          x-int64: true
         starttime:
           description: The task start time (Epoch)
           format: int64
           type: integer
+          x-int64: true
         status:
           description: '''running'' or ''stopped'''
           type: string
@@ -37968,6 +38198,7 @@ components:
           description: port used to bind termproxy to
           format: int64
           type: integer
+          x-int64: true
         ticket:
           description: ticket used to verifiy websocket connection
           type: string
@@ -37993,11 +38224,13 @@ components:
           format: int64
           minimum: 1297163644
           type: integer
+          x-int64: true
         time:
           description: Seconds since 1970-01-01 00:00:00 UTC.
           format: int64
           minimum: 1297163644
           type: integer
+          x-int64: true
         timezone:
           description: Time zone. The file '/usr/share/zoneinfo/zone.tab' contains
             the list of valid names.
@@ -38054,6 +38287,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         backend-type:
           allOf:
           - $ref: "#/components/schemas/PbsBackendTypeEnum"
@@ -38071,6 +38305,7 @@ components:
             means that usage is declining or not changing.
           format: int64
           type: integer
+          x-int64: true
         gc-status:
           $ref: "#/components/schemas/AdminDatastoreGetStatusResponse_data_gc_status"
         history:
@@ -38083,11 +38318,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         history-start:
           description: History start time (epoch)
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         mount-status:
           allOf:
           - $ref: "#/components/schemas/PbsMountStatusEnum"
@@ -38105,11 +38342,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         used:
           description: The used bytes of the underlying storage.
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
       required:
       - backend-type
       - mount-status
@@ -38172,6 +38411,7 @@ components:
           description: Endtime of the last run.
           format: int64
           type: integer
+          x-int64: true
         last-run-state:
           description: Result of the last run.
           type: string
@@ -38195,6 +38435,7 @@ components:
           description: Estimated time of the next run (UNIX epoch).
           format: int64
           type: integer
+          x-int64: true
         notification-mode:
           allOf:
           - $ref: "#/components/schemas/PbsNotificationModeEnum"
@@ -38299,6 +38540,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         entry-kind:
           allOf:
           - $ref: "#/components/schemas/PbsTapeChangerEntryKindEnum"
@@ -38314,6 +38556,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         state:
           description: The current state of the drive
           type: string
@@ -38422,6 +38665,7 @@ components:
           description: Creation time stamp
           format: int64
           type: integer
+          x-int64: true
         encryption-key-fingerprint:
           description: Encryption key fingerprint
           type: string
@@ -38432,6 +38676,7 @@ components:
           description: MediaSet Creation time stamp
           format: int64
           type: integer
+          x-int64: true
         media-set-uuid:
           description: MediaSet Uuid (We use the all-zero Uuid to reserve an empty
             media for a specific pool).
@@ -38445,6 +38690,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         uuid:
           description: Media Uuid.
           pattern: "/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/"
@@ -38482,6 +38728,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         blocksize:
           description: Block size (0 is variable size)
           maximum: 4294967295
@@ -38497,11 +38744,13 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         bytes-written:
           description: Total Bytes Written in Medium Life
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         compression:
           description: Compression enabled
           type: boolean
@@ -38518,10 +38767,12 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         manufactured:
           description: Medium Manufacture Date (epoch)
           format: int64
           type: integer
+          x-int64: true
         medium-passes:
           description: |-
             Count of the total number of times the medium has passed over
@@ -38529,6 +38780,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         medium-wearout:
           description: Estimated tape wearout factor (assuming max. 16000 end-to-end
             passes)
@@ -38547,6 +38799,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         write-protect:
           description: Media is write protected
           type: boolean
@@ -38591,61 +38844,73 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-load-read-compression-ratio:
           description: Last load read compression ratio
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-load-write-compression-ratio:
           description: Last load write compression ratio
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-mount-bytes-read:
           description: Last mount bytes read
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-mount-bytes-written:
           description: Last mount bytes written
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-mount-unrecovered-read-errors:
           description: Last mount unrecovered read errors
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         last-mount-unrecovered-write-errors:
           description: Last mount unrecovered write errors
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         lifetime-bytes-read:
           description: Lifetime bytes read
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         lifetime-bytes-written:
           description: Lifetime bytes written
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         medium-mount-time:
           description: Medium mount time
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         medium-ready-time:
           description: Medium ready time
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         middle-of-tape-passes:
           description: Middle of medium passes
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         serial:
           description: Volume serial number
           type: string
@@ -38654,56 +38919,67 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         total-used-native-capacity:
           description: Total used native capacity
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-datasets-read:
           description: Total datasets read
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-datasets-written:
           description: Total data sets written
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-mounts:
           description: Volume mounts (thread count)
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-recovered-read-errors:
           description: Total read retries
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-recovered-write-data-errors:
           description: Write retries
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-unrecovered-read-errors:
           description: Total unrecovered read errors
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-unrecovered-write-data-errors:
           description: Total unrecovered write errors
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-unrecovered-write-servo-errors:
           description: Total fatal suspended writes
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         volume-write-servo-errors:
           description: Total suspended writes
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         worm:
           description: Volume is WORM
           type: boolean
@@ -38754,6 +39030,7 @@ components:
           description: Snapshot creation time (epoch)
           format: int64
           type: integer
+          x-int64: true
         label-text:
           description: Media label text (or Barcode)
           type: string
@@ -38761,6 +39038,7 @@ components:
           description: MediaSet Creation time stamp
           format: int64
           type: integer
+          x-int64: true
         media-set-name:
           description: Media set name
           type: string
@@ -38777,6 +39055,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         snapshot:
           description: Backup snapshot
           type: string
@@ -38819,6 +39098,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         catalog:
           description: Catalog status OK
           type: boolean
@@ -38826,6 +39106,7 @@ components:
           description: Creation time stamp
           format: int64
           type: integer
+          x-int64: true
         expired:
           description: Expired flag
           type: boolean
@@ -38839,6 +39120,7 @@ components:
           description: MediaSet creation time stamp
           format: int64
           type: integer
+          x-int64: true
         media-set-name:
           description: Media set name
           type: string
@@ -38855,6 +39137,7 @@ components:
           format: int64
           minimum: 0
           type: integer
+          x-int64: true
         status:
           allOf:
           - $ref: "#/components/schemas/PbsTapeMediaStatusEnum"
@@ -38884,6 +39167,7 @@ components:
           description: MediaSet creation time stamp
           format: int64
           type: integer
+          x-int64: true
         media-set-name:
           description: Media set name
           type: string
